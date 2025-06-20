@@ -1,0 +1,156 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "creation": "2024-03-13 12:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "item_code",
+        "item_name",
+        "description",
+        "quantity",
+        "unit",
+        "rate",
+        "amount",
+        "column_break_7",
+        "cost_center",
+        "parent",
+        "parentfield",
+        "parenttype"
+    ],
+    "fields": [
+        {
+            "fieldname": "item_code",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Item Code",
+            "options": "Item",
+            "reqd": 1
+        },
+        {
+            "fieldname": "item_name",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Item Name",
+            "read_only": 1
+        },
+        {
+            "fieldname": "description",
+            "fieldtype": "Text Editor",
+            "label": "Description"
+        },
+        {
+            "fieldname": "quantity",
+            "fieldtype": "Float",
+            "label": "Quantity",
+            "reqd": 1
+        },
+        {
+            "fieldname": "unit",
+            "fieldtype": "Link",
+            "label": "Unit",
+            "options": "UOM",
+            "reqd": 1
+        },
+        {
+            "fieldname": "rate",
+            "fieldtype": "Currency",
+            "label": "Rate",
+            "reqd": 1
+        },
+        {
+            "fieldname": "amount",
+            "fieldtype": "Currency",
+            "label": "Amount",
+            "read_only": 1
+        },
+        {
+            "fieldname": "column_break_7",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "cost_center",
+            "fieldtype": "Link",
+            "label": "Cost Center",
+            "options": "Cost Center"
+        },
+        {
+            "fieldname": "parent",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Parent",
+            "reqd": 1
+        },
+        {
+            "fieldname": "parentfield",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Parent Field",
+            "reqd": 1
+        },
+        {
+            "fieldname": "parenttype",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Parent Type",
+            "reqd": 1
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2024-03-13 12:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Construction Project",
+    "name": "Construction Project Budget",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Construction Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Construction Engineer",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Construction Worker",
+            "share": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": [],
+    "track_changes": 1
+} 

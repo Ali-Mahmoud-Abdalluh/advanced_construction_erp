@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "autoname": "hash",
+ "creation": "2023-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "risk_description",
+  "risk_category",
+  "probability",
+  "impact",
+  "column_break_5",
+  "risk_score",
+  "mitigation_strategy",
+  "contingency_plan",
+  "responsible_person"
+ ],
+ "fields": [
+  {
+   "fieldname": "risk_description",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Risk Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "risk_category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Risk Category",
+   "options": "Technical\nFinancial\nSchedule\nRegulatory\nEnvironmental\nSafety\nQuality\nResource\nStakeholder\nOther"
+  },
+  {
+   "default": "50",
+   "fieldname": "probability",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Probability (%)"
+  },
+  {
+   "default": "5",
+   "fieldname": "impact",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Impact (1-10)"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "risk_score",
+   "fieldtype": "Float",
+   "label": "Risk Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "mitigation_strategy",
+   "fieldtype": "Text",
+   "label": "Mitigation Strategy"
+  },
+  {
+   "fieldname": "contingency_plan",
+   "fieldtype": "Text",
+   "label": "Contingency Plan"
+  },
+  {
+   "fieldname": "responsible_person",
+   "fieldtype": "Link",
+   "label": "Responsible Person",
+   "options": "User"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2023-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Pre Construction",
+ "name": "Risk Factor",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

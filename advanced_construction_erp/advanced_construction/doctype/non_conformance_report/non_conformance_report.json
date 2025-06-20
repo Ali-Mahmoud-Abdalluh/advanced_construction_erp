@@ -1,0 +1,261 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "autoname": "format:NCR-{YYYY}-{#####}",
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "details_section",
+        "inspection",
+        "project",
+        "reference_type",
+        "reference_name",
+        "item_code",
+        "item_name",
+        "date_identified",
+        "identified_by",
+        "status",
+        "issues_section",
+        "issues",
+        "analysis_section",
+        "root_cause",
+        "root_cause_category",
+        "impact",
+        "severity",
+        "corrective_action_section",
+        "corrective_actions",
+        "preventive_action_section",
+        "preventive_actions",
+        "verification_section",
+        "verification_method",
+        "verified_by",
+        "verification_date",
+        "verification_result",
+        "verification_remarks",
+        "attachments_section",
+        "attachments"
+    ],
+    "fields": [
+        {
+            "fieldname": "details_section",
+            "fieldtype": "Section Break",
+            "label": "Details"
+        },
+        {
+            "fieldname": "inspection",
+            "fieldtype": "Link",
+            "label": "Inspection",
+            "options": "Quality Inspection"
+        },
+        {
+            "fieldname": "project",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Project",
+            "options": "Construction Project",
+            "reqd": 1
+        },
+        {
+            "fieldname": "reference_type",
+            "fieldtype": "Select",
+            "label": "Reference Type",
+            "options": "\nPurchase Receipt\nDelivery Note\nStock Entry\nTask\nWork Order\nOther"
+        },
+        {
+            "fieldname": "reference_name",
+            "fieldtype": "Dynamic Link",
+            "label": "Reference Name",
+            "options": "reference_type"
+        },
+        {
+            "fieldname": "item_code",
+            "fieldtype": "Link",
+            "label": "Item Code",
+            "options": "Item"
+        },
+        {
+            "fieldname": "item_name",
+            "fieldtype": "Data",
+            "label": "Item Name",
+            "read_only": 1
+        },
+        {
+            "fieldname": "date_identified",
+            "fieldtype": "Date",
+            "in_list_view": 1,
+            "label": "Date Identified",
+            "reqd": 1
+        },
+        {
+            "fieldname": "identified_by",
+            "fieldtype": "Link",
+            "label": "Identified By",
+            "options": "User",
+            "reqd": 1
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Status",
+            "options": "Open\nRoot Cause Identified\nAction Plan Created\nCorrective Action Completed\nVerified\nClosed\nCancelled",
+            "reqd": 1
+        },
+        {
+            "fieldname": "issues_section",
+            "fieldtype": "Section Break",
+            "label": "Issues"
+        },
+        {
+            "fieldname": "issues",
+            "fieldtype": "Table",
+            "label": "Issues",
+            "options": "Non Conformance Issue",
+            "reqd": 1
+        },
+        {
+            "fieldname": "analysis_section",
+            "fieldtype": "Section Break",
+            "label": "Analysis"
+        },
+        {
+            "fieldname": "root_cause",
+            "fieldtype": "Text Editor",
+            "label": "Root Cause Analysis"
+        },
+        {
+            "fieldname": "root_cause_category",
+            "fieldtype": "Select",
+            "label": "Root Cause Category",
+            "options": "Material Quality\nWorkmanship\nEquipment Failure\nDesign Issue\nProcedural Error\nTraining Gap\nCommunication Issue\nEnvironmental Factor\nOther"
+        },
+        {
+            "fieldname": "impact",
+            "fieldtype": "Text",
+            "label": "Impact"
+        },
+        {
+            "fieldname": "severity",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Severity",
+            "options": "Low\nMedium\nHigh\nCritical",
+            "reqd": 1
+        },
+        {
+            "fieldname": "corrective_action_section",
+            "fieldtype": "Section Break",
+            "label": "Corrective Action"
+        },
+        {
+            "fieldname": "corrective_actions",
+            "fieldtype": "Table",
+            "label": "Corrective Actions",
+            "options": "Non Conformance Action"
+        },
+        {
+            "fieldname": "preventive_action_section",
+            "fieldtype": "Section Break",
+            "label": "Preventive Action"
+        },
+        {
+            "fieldname": "preventive_actions",
+            "fieldtype": "Table",
+            "label": "Preventive Actions",
+            "options": "Non Conformance Action"
+        },
+        {
+            "fieldname": "verification_section",
+            "fieldtype": "Section Break",
+            "label": "Verification"
+        },
+        {
+            "fieldname": "verification_method",
+            "fieldtype": "Select",
+            "label": "Verification Method",
+            "options": "Inspection\nTesting\nDocument Review\nAudit\nOther"
+        },
+        {
+            "fieldname": "verified_by",
+            "fieldtype": "Link",
+            "label": "Verified By",
+            "options": "User"
+        },
+        {
+            "fieldname": "verification_date",
+            "fieldtype": "Date",
+            "label": "Verification Date"
+        },
+        {
+            "fieldname": "verification_result",
+            "fieldtype": "Select",
+            "label": "Verification Result",
+            "options": "Pending\nPassed\nFailed"
+        },
+        {
+            "fieldname": "verification_remarks",
+            "fieldtype": "Text",
+            "label": "Verification Remarks"
+        },
+        {
+            "fieldname": "attachments_section",
+            "fieldtype": "Section Break",
+            "label": "Attachments"
+        },
+        {
+            "fieldname": "attachments",
+            "fieldtype": "Table",
+            "label": "Attachments",
+            "options": "Quality Inspection Attachment"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2024-01-01 00:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Quality Management",
+    "name": "Non Conformance Report",
+    "naming_rule": "Expression",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Quality Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Quality User",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": []
+} 

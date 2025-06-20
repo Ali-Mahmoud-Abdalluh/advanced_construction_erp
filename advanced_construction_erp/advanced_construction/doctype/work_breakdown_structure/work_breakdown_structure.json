@@ -1,0 +1,109 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-10-15 12:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "wbs_code",
+  "wbs_level",
+  "parent_wbs",
+  "description",
+  "column_break_5",
+  "estimated_cost",
+  "duration_days",
+  "start_date",
+  "end_date",
+  "section_break_10",
+  "deliverables",
+  "resources_required",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "wbs_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "WBS Code",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "wbs_level",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "WBS Level",
+   "reqd": 1
+  },
+  {
+   "fieldname": "parent_wbs",
+   "fieldtype": "Data",
+   "label": "Parent WBS"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "estimated_cost",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Estimated Cost"
+  },
+  {
+   "fieldname": "duration_days",
+   "fieldtype": "Int",
+   "label": "Duration (Days)"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "deliverables",
+   "fieldtype": "Small Text",
+   "label": "Deliverables"
+  },
+  {
+   "fieldname": "resources_required",
+   "fieldtype": "Small Text",
+   "label": "Resources Required"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-10-15 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Pre Construction",
+ "name": "Work Breakdown Structure",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

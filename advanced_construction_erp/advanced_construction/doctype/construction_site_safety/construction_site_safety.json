@@ -1,0 +1,322 @@
+{
+  "autoname": "format:SITE-SAFETY-{####}",
+  "creation": "2023-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "basic_details_section",
+    "construction_site",
+    "site_name",
+    "inspection_date",
+    "column_break_4",
+    "inspector_name",
+    "inspector_designation",
+    "inspection_type",
+    "section_break_8",
+    "safety_checklist_section",
+    "ppe_compliance",
+    "scaffolding_safety",
+    "electrical_safety",
+    "fire_safety",
+    "column_break_14",
+    "equipment_safety",
+    "hazardous_materials",
+    "housekeeping",
+    "first_aid",
+    "section_break_19",
+    "observations_section",
+    "observations",
+    "section_break_22",
+    "hazards_identified",
+    "column_break_24",
+    "corrective_actions",
+    "section_break_26",
+    "compliance_status_section",
+    "compliance_status",
+    "non_compliance_details",
+    "column_break_30",
+    "follow_up_date",
+    "follow_up_inspector",
+    "section_break_33",
+    "attachments_section",
+    "attachments",
+    "amended_from"
+  ],
+  "fields": [
+    {
+      "fieldname": "basic_details_section",
+      "fieldtype": "Section Break",
+      "label": "Basic Details"
+    },
+    {
+      "fieldname": "construction_site",
+      "fieldtype": "Link",
+      "label": "Construction Site",
+      "options": "Construction Site",
+      "reqd": 1
+    },
+    {
+      "fetch_from": "construction_site.site_name",
+      "fieldname": "site_name",
+      "fieldtype": "Data",
+      "label": "Site Name",
+      "read_only": 1
+    },
+    {
+      "default": "Today",
+      "fieldname": "inspection_date",
+      "fieldtype": "Date",
+      "in_list_view": 1,
+      "label": "Inspection Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_4",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "inspector_name",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Inspector Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "inspector_designation",
+      "fieldtype": "Data",
+      "label": "Inspector Designation"
+    },
+    {
+      "fieldname": "inspection_type",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Inspection Type",
+      "options": "Routine\nFollow-up\nIncident Investigation\nPre-activity\nRegulatory\nSpecial",
+      "reqd": 1
+    },
+    {
+      "fieldname": "section_break_8",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "safety_checklist_section",
+      "fieldtype": "Section Break",
+      "label": "Safety Checklist"
+    },
+    {
+      "fieldname": "ppe_compliance",
+      "fieldtype": "Select",
+      "label": "PPE Compliance",
+      "options": "Compliant\nPartially Compliant\nNon-Compliant\nNot Applicable"
+    },
+    {
+      "fieldname": "scaffolding_safety",
+      "fieldtype": "Select",
+      "label": "Scaffolding Safety",
+      "options": "Compliant\nPartially Compliant\nNon-Compliant\nNot Applicable"
+    },
+    {
+      "fieldname": "electrical_safety",
+      "fieldtype": "Select",
+      "label": "Electrical Safety",
+      "options": "Compliant\nPartially Compliant\nNon-Compliant\nNot Applicable"
+    },
+    {
+      "fieldname": "fire_safety",
+      "fieldtype": "Select",
+      "label": "Fire Safety",
+      "options": "Compliant\nPartially Compliant\nNon-Compliant\nNot Applicable"
+    },
+    {
+      "fieldname": "column_break_14",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "equipment_safety",
+      "fieldtype": "Select",
+      "label": "Equipment Safety",
+      "options": "Compliant\nPartially Compliant\nNon-Compliant\nNot Applicable"
+    },
+    {
+      "fieldname": "hazardous_materials",
+      "fieldtype": "Select",
+      "label": "Hazardous Materials",
+      "options": "Compliant\nPartially Compliant\nNon-Compliant\nNot Applicable"
+    },
+    {
+      "fieldname": "housekeeping",
+      "fieldtype": "Select",
+      "label": "Housekeeping",
+      "options": "Compliant\nPartially Compliant\nNon-Compliant\nNot Applicable"
+    },
+    {
+      "fieldname": "first_aid",
+      "fieldtype": "Select",
+      "label": "First Aid Facilities",
+      "options": "Compliant\nPartially Compliant\nNon-Compliant\nNot Applicable"
+    },
+    {
+      "fieldname": "section_break_19",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "observations_section",
+      "fieldtype": "Section Break",
+      "label": "Observations"
+    },
+    {
+      "fieldname": "observations",
+      "fieldtype": "Text Editor",
+      "label": "Observations"
+    },
+    {
+      "fieldname": "section_break_22",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "hazards_identified",
+      "fieldtype": "Table",
+      "label": "Hazards Identified",
+      "options": "Construction Site Safety Hazard"
+    },
+    {
+      "fieldname": "column_break_24",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "corrective_actions",
+      "fieldtype": "Table",
+      "label": "Corrective Actions",
+      "options": "Construction Site Safety Action"
+    },
+    {
+      "fieldname": "section_break_26",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "compliance_status_section",
+      "fieldtype": "Section Break",
+      "label": "Compliance Status"
+    },
+    {
+      "fieldname": "compliance_status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Compliance Status",
+      "options": "Compliant\nPartially Compliant\nNon-Compliant",
+      "reqd": 1
+    },
+    {
+      "depends_on": "eval:doc.compliance_status !== 'Compliant'",
+      "fieldname": "non_compliance_details",
+      "fieldtype": "Small Text",
+      "label": "Non-Compliance Details"
+    },
+    {
+      "fieldname": "column_break_30",
+      "fieldtype": "Column Break"
+    },
+    {
+      "depends_on": "eval:doc.compliance_status !== 'Compliant'",
+      "fieldname": "follow_up_date",
+      "fieldtype": "Date",
+      "label": "Follow-up Date"
+    },
+    {
+      "depends_on": "eval:doc.compliance_status !== 'Compliant'",
+      "fieldname": "follow_up_inspector",
+      "fieldtype": "Data",
+      "label": "Follow-up Inspector"
+    },
+    {
+      "fieldname": "section_break_33",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "attachments_section",
+      "fieldtype": "Section Break",
+      "label": "Attachments"
+    },
+    {
+      "fieldname": "attachments",
+      "fieldtype": "Table",
+      "label": "Attachments",
+      "options": "Construction Site Safety Attachment"
+    },
+    {
+      "fieldname": "amended_from",
+      "fieldtype": "Link",
+      "label": "Amended From",
+      "no_copy": 1,
+      "options": "Construction Site Safety",
+      "print_hide": 1,
+      "read_only": 1
+    }
+  ],
+  "is_submittable": 1,
+  "modified": "2023-01-01 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Site Management",
+  "name": "Construction Site Safety",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "amend": 1,
+      "cancel": 1,
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    },
+    {
+      "amend": 1,
+      "cancel": 1,
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Construction Manager",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    },
+    {
+      "amend": 1,
+      "cancel": 1,
+      "create": 1,
+      "delete": 0,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Construction User",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    },
+    {
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Construction Viewer",
+      "share": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

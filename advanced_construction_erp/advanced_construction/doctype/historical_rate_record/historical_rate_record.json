@@ -1,0 +1,57 @@
+{
+    "actions": [],
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "rate_date",
+        "rate",
+        "index_value",
+        "source",
+        "notes"
+    ],
+    "fields": [
+        {
+            "fieldname": "rate_date",
+            "fieldtype": "Date",
+            "in_list_view": 1,
+            "label": "Rate Date",
+            "reqd": 1
+        },
+        {
+            "fieldname": "rate",
+            "fieldtype": "Currency",
+            "in_list_view": 1,
+            "label": "Rate",
+            "reqd": 1
+        },
+        {
+            "fieldname": "index_value",
+            "fieldtype": "Float",
+            "in_list_view": 1,
+            "label": "Index Value"
+        },
+        {
+            "fieldname": "source",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Source"
+        },
+        {
+            "fieldname": "notes",
+            "fieldtype": "Text",
+            "label": "Notes"
+        }
+    ],
+    "istable": 1,
+    "modified": "2024-01-01 00:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Construction Estimation",
+    "name": "Historical Rate Record",
+    "owner": "Administrator",
+    "permissions": [],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+} 

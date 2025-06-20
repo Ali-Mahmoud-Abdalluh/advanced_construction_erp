@@ -1,0 +1,93 @@
+{
+ "actions": [],
+ "autoname": "hash",
+ "creation": "2023-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "task_name",
+  "description",
+  "assigned_to",
+  "status",
+  "column_break_5",
+  "planned_start_date",
+  "planned_end_date",
+  "actual_start_date",
+  "actual_end_date",
+  "completion_percentage"
+ ],
+ "fields": [
+  {
+   "fieldname": "task_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Task Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "assigned_to",
+   "fieldtype": "Link",
+   "label": "Assigned To",
+   "options": "User"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Pending\nIn Progress\nCompleted\nCancelled"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "planned_start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Planned Start Date"
+  },
+  {
+   "fieldname": "planned_end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Planned End Date"
+  },
+  {
+   "fieldname": "actual_start_date",
+   "fieldtype": "Date",
+   "label": "Actual Start Date"
+  },
+  {
+   "fieldname": "actual_end_date",
+   "fieldtype": "Date",
+   "label": "Actual End Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "completion_percentage",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Completion Percentage"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2023-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Pre Construction",
+ "name": "Pre Construction Task",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+} 

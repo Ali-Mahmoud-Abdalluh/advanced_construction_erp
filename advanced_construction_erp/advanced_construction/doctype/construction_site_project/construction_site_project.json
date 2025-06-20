@@ -1,0 +1,102 @@
+{
+  "autoname": "hash",
+  "creation": "2023-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "construction_project",
+    "project_name",
+    "column_break_3",
+    "project",
+    "status",
+    "section_break_6",
+    "start_date",
+    "end_date",
+    "column_break_9",
+    "completion_percentage",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "construction_project",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Construction Project",
+      "options": "Construction Project"
+    },
+    {
+      "fetch_from": "construction_project.project_name",
+      "fieldname": "project_name",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Project Name",
+      "read_only": 1
+    },
+    {
+      "fieldname": "column_break_3",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fetch_from": "construction_project.erpnext_project",
+      "fieldname": "project",
+      "fieldtype": "Link",
+      "label": "ERPNext Project",
+      "options": "Project",
+      "read_only": 1
+    },
+    {
+      "fetch_from": "construction_project.status",
+      "fieldname": "status",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Status",
+      "read_only": 1
+    },
+    {
+      "fieldname": "section_break_6",
+      "fieldtype": "Section Break",
+      "label": "Timeline"
+    },
+    {
+      "fetch_from": "construction_project.expected_start_date",
+      "fieldname": "start_date",
+      "fieldtype": "Date",
+      "label": "Start Date",
+      "read_only": 1
+    },
+    {
+      "fetch_from": "construction_project.expected_end_date",
+      "fieldname": "end_date",
+      "fieldtype": "Date",
+      "label": "End Date",
+      "read_only": 1
+    },
+    {
+      "fieldname": "column_break_9",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fetch_from": "construction_project.completion_percentage",
+      "fieldname": "completion_percentage",
+      "fieldtype": "Percent",
+      "label": "Completion Percentage",
+      "read_only": 1
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "Notes"
+    }
+  ],
+  "istable": 1,
+  "modified": "2023-01-01 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Site Management",
+  "name": "Construction Site Project",
+  "owner": "Administrator",
+  "permissions": [],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

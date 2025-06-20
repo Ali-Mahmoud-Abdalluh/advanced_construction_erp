@@ -1,0 +1,17 @@
+include MANIFEST.in
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include advanced_construction_erp *.css
+recursive-include advanced_construction_erp *.csv
+recursive-include advanced_construction_erp *.html
+recursive-include advanced_construction_erp *.ico
+recursive-include advanced_construction_erp *.js
+recursive-include advanced_construction_erp *.json
+recursive-include advanced_construction_erp *.md
+recursive-include advanced_construction_erp *.png
+recursive-include advanced_construction_erp *.py
+recursive-include advanced_construction_erp *.svg
+recursive-include advanced_construction_erp *.txt
+recursive-exclude advanced_construction_erp *.pyc

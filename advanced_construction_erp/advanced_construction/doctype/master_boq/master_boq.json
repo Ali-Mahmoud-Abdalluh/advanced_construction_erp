@@ -1,0 +1,252 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "project",
+        "boq_details_section",
+        "boq_date",
+        "status",
+        "revision_number",
+        "based_on_detailed_estimate",
+        "detailed_estimate",
+        "description",
+        "boq_settings_section",
+        "allow_hierarchical_items",
+        "enable_specification_integration",
+        "enable_drawing_integration",
+        "enable_quantity_verification",
+        "boq_items_section",
+        "boq_items",
+        "summary_section",
+        "total_amount",
+        "approval_section",
+        "prepared_by",
+        "prepared_on",
+        "reviewed_by",
+        "reviewed_on",
+        "approved_by",
+        "approved_on",
+        "rejected_by",
+        "rejected_on",
+        "rejection_reason"
+    ],
+    "fields": [
+        {
+            "fieldname": "project",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Project",
+            "options": "Construction Project",
+            "reqd": 1
+        },
+        {
+            "fieldname": "boq_details_section",
+            "fieldtype": "Section Break",
+            "label": "BOQ Details"
+        },
+        {
+            "fieldname": "boq_date",
+            "fieldtype": "Date",
+            "in_list_view": 1,
+            "label": "BOQ Date",
+            "reqd": 1
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Status",
+            "options": "Draft\nSubmitted\nApproved\nRejected\nRevised",
+            "reqd": 1
+        },
+        {
+            "fieldname": "revision_number",
+            "fieldtype": "Int",
+            "label": "Revision Number",
+            "default": 0
+        },
+        {
+            "fieldname": "based_on_detailed_estimate",
+            "fieldtype": "Check",
+            "label": "Based on Detailed Estimate"
+        },
+        {
+            "fieldname": "detailed_estimate",
+            "fieldtype": "Link",
+            "label": "Detailed Estimate",
+            "options": "Detailed Estimate",
+            "depends_on": "eval:doc.based_on_detailed_estimate==1"
+        },
+        {
+            "fieldname": "description",
+            "fieldtype": "Text Editor",
+            "label": "Description"
+        },
+        {
+            "fieldname": "boq_settings_section",
+            "fieldtype": "Section Break",
+            "label": "BOQ Settings"
+        },
+        {
+            "fieldname": "allow_hierarchical_items",
+            "fieldtype": "Check",
+            "label": "Allow Hierarchical Items",
+            "default": 1
+        },
+        {
+            "fieldname": "enable_specification_integration",
+            "fieldtype": "Check",
+            "label": "Enable Specification Integration",
+            "default": 1
+        },
+        {
+            "fieldname": "enable_drawing_integration",
+            "fieldtype": "Check",
+            "label": "Enable Drawing Integration",
+            "default": 1
+        },
+        {
+            "fieldname": "enable_quantity_verification",
+            "fieldtype": "Check",
+            "label": "Enable Quantity Verification",
+            "default": 1
+        },
+        {
+            "fieldname": "boq_items_section",
+            "fieldtype": "Section Break",
+            "label": "BOQ Items"
+        },
+        {
+            "fieldname": "boq_items",
+            "fieldtype": "Table",
+            "label": "BOQ Items",
+            "options": "BOQ Item",
+            "reqd": 1
+        },
+        {
+            "fieldname": "summary_section",
+            "fieldtype": "Section Break",
+            "label": "Summary"
+        },
+        {
+            "fieldname": "total_amount",
+            "fieldtype": "Currency",
+            "in_list_view": 1,
+            "label": "Total Amount",
+            "read_only": 1
+        },
+        {
+            "fieldname": "approval_section",
+            "fieldtype": "Section Break",
+            "label": "Approval Information"
+        },
+        {
+            "fieldname": "prepared_by",
+            "fieldtype": "Link",
+            "label": "Prepared By",
+            "options": "User",
+            "read_only": 1
+        },
+        {
+            "fieldname": "prepared_on",
+            "fieldtype": "Date",
+            "label": "Prepared On",
+            "read_only": 1
+        },
+        {
+            "fieldname": "reviewed_by",
+            "fieldtype": "Link",
+            "label": "Reviewed By",
+            "options": "User",
+            "read_only": 1
+        },
+        {
+            "fieldname": "reviewed_on",
+            "fieldtype": "Date",
+            "label": "Reviewed On",
+            "read_only": 1
+        },
+        {
+            "fieldname": "approved_by",
+            "fieldtype": "Link",
+            "label": "Approved By",
+            "options": "User",
+            "read_only": 1
+        },
+        {
+            "fieldname": "approved_on",
+            "fieldtype": "Date",
+            "label": "Approved On",
+            "read_only": 1
+        },
+        {
+            "fieldname": "rejected_by",
+            "fieldtype": "Link",
+            "label": "Rejected By",
+            "options": "User",
+            "read_only": 1
+        },
+        {
+            "fieldname": "rejected_on",
+            "fieldtype": "Date",
+            "label": "Rejected On",
+            "read_only": 1
+        },
+        {
+            "fieldname": "rejection_reason",
+            "fieldtype": "Text",
+            "label": "Rejection Reason",
+            "read_only": 1
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2024-01-01 00:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Construction Estimation",
+    "name": "Master BOQ",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Construction Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Construction User",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+} 

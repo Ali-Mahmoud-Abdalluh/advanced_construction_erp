@@ -1,0 +1,235 @@
+{% extends "templates/web.html" %}
+
+{% block title %}{{ _("Construction Project Status") }}{% endblock %}
+
+{% block page_content %}
+<div class="report-container">
+    <div class="filter-section">
+        <h3>{{ _("Filters") }}</h3>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>{{ _("Project") }}</label>
+                    <div class="project-filter"></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>{{ _("Construction Type") }}</label>
+                    <div class="construction-type-filter"></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>{{ _("Status") }}</label>
+                    <div class="status-filter"></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>{{ _("Project Manager") }}</label>
+                    <div class="project-manager-filter"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>{{ _("From Date") }}</label>
+                    <div class="from-date-filter"></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>{{ _("To Date") }}</label>
+                    <div class="to-date-filter"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group" style="text-align: right; margin-top: 25px;">
+                    <button class="export-button">
+                        <i class="fa fa-download"></i> {{ _("Export to Excel") }}
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="report-content">
+        <div class="report-table-container">
+            <table class="report-table">
+                <thead>
+                    <tr>
+                        <th>{{ _("Project") }}</th>
+                        <th>{{ _("Construction Type") }}</th>
+                        <th>{{ _("Status") }}</th>
+                        <th>{{ _("Progress") }}</th>
+                        <th>{{ _("Start Date") }}</th>
+                        <th>{{ _("End Date") }}</th>
+                        <th>{{ _("Total Budget") }}</th>
+                        <th>{{ _("Actual Cost") }}</th>
+                        <th>{{ _("Cost Variance") }}</th>
+                        <th>{{ _("Project Manager") }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in data %}
+                    <tr>
+                        <td>{{ row.project }}</td>
+                        <td>{{ row.construction_type }}</td>
+                        <td>{{ row.status }}</td>
+                        <td>{{ row.progress }}%</td>
+                        <td>{{ row.start_date }}</td>
+                        <td>{{ row.end_date }}</td>
+                        <td>{{ row.total_budget }}</td>
+                        <td>{{ row.actual_cost }}</td>
+                        <td>{{ row.cost_variance }}</td>
+                        <td>{{ row.project_manager }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script>
+    frappe.ready(function() {
+        // Initialize filters
+        new frappe.ui.FilterGroup({
+            parent: $('.project-filter'),
+            doctype: 'Project',
+            on_change: function() {
+                refresh_report();
+            }
+        });
+
+        new frappe.ui.FilterGroup({
+            parent: $('.construction-type-filter'),
+            doctype: 'Construction Project',
+            fieldname: 'construction_type',
+            on_change: function() {
+                refresh_report();
+            }
+        });
+
+        new frappe.ui.FilterGroup({
+            parent: $('.status-filter'),
+            doctype: 'Construction Project',
+            fieldname: 'status',
+            on_change: function() {
+                refresh_report();
+            }
+        });
+
+        new frappe.ui.FilterGroup({
+            parent: $('.project-manager-filter'),
+            doctype: 'User',
+            on_change: function() {
+                refresh_report();
+            }
+        });
+
+        new frappe.ui.FilterGroup({
+            parent: $('.from-date-filter'),
+            doctype: 'Construction Project',
+            fieldname: 'start_date',
+            on_change: function() {
+                refresh_report();
+            }
+        });
+
+        new frappe.ui.FilterGroup({
+            parent: $('.to-date-filter'),
+            doctype: 'Construction Project',
+            fieldname: 'end_date',
+            on_change: function() {
+                refresh_report();
+            }
+        });
+
+        // Export button handler
+        $('.export-button').on('click', function() {
+            var filters = get_filters();
+            window.location.href = `/api/method/construction_project.construction_project.report.construction_project_status.construction_project_status.export_to_excel?filters=${JSON.stringify(filters)}`;
+        });
+
+        function get_filters() {
+            var filters = {};
+            $('.filter-group').each(function() {
+                var filter_group = $(this).data('filter-group');
+                if (filter_group) {
+                    filters[filter_group.fieldname] = filter_group.get_value();
+                }
+            });
+            return filters;
+        }
+
+        function refresh_report() {
+            var filters = get_filters();
+            frappe.call({
+                method: 'construction_project.construction_project.report.construction_project_status.construction_project_status.execute',
+                args: {
+                    filters: filters
+                },
+                callback: function(r) {
+                    if (r.message) {
+                        update_report_table(r.message);
+                    }
+                }
+            });
+        }
+
+        function update_report_table(data) {
+            var tbody = $('.report-table tbody');
+            tbody.empty();
+            
+            data.forEach(function(row) {
+                var tr = $('<tr>');
+                tr.append($('<td>').text(row.project));
+                tr.append($('<td>').text(row.construction_type));
+                tr.append($('<td>').html(get_status_badge(row.status)));
+                tr.append($('<td>').text(row.progress + '%'));
+                tr.append($('<td>').text(row.start_date));
+                tr.append($('<td>').text(row.end_date));
+                tr.append($('<td>').text(row.total_budget));
+                tr.append($('<td>').text(row.actual_cost));
+                tr.append($('<td>').html(get_cost_variance_html(row.cost_variance)));
+                tr.append($('<td>').text(row.project_manager));
+                tbody.append(tr);
+            });
+        }
+
+        function get_status_badge(status) {
+            var badge_class = '';
+            switch(status) {
+                case 'Completed':
+                    badge_class = 'completed';
+                    break;
+                case 'In Progress':
+                    badge_class = 'in-progress';
+                    break;
+                case 'On Hold':
+                    badge_class = 'on-hold';
+                    break;
+                case 'Cancelled':
+                    badge_class = 'cancelled';
+                    break;
+                default:
+                    badge_class = 'not-started';
+            }
+            return `<span class="status-badge ${badge_class}">${status}</span>`;
+        }
+
+        function get_cost_variance_html(variance) {
+            var color = variance < 0 ? 'red' : (variance > 0 ? 'green' : '');
+            return `<span style="color: ${color}">${variance}</span>`;
+        }
+
+        // Initial load
+        refresh_report();
+    });
+</script>
+{% endblock %} 

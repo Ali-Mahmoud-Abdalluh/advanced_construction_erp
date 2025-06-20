@@ -1,0 +1,59 @@
+{
+  "autoname": "hash",
+  "creation": "2023-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "attachment_type",
+    "attachment",
+    "column_break_3",
+    "description",
+    "date"
+  ],
+  "fields": [
+    {
+      "fieldname": "attachment_type",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Attachment Type",
+      "options": "Photo\nInspection Report\nCertificate\nTraining Record\nSafety Data Sheet\nRisk Assessment\nOther",
+      "reqd": 1
+    },
+    {
+      "fieldname": "attachment",
+      "fieldtype": "Attach",
+      "in_list_view": 1,
+      "label": "Attachment",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_3",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "description",
+      "fieldtype": "Small Text",
+      "in_list_view": 1,
+      "label": "Description"
+    },
+    {
+      "default": "Today",
+      "fieldname": "date",
+      "fieldtype": "Date",
+      "in_list_view": 1,
+      "label": "Date",
+      "reqd": 1
+    }
+  ],
+  "istable": 1,
+  "modified": "2023-01-01 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Site Management",
+  "name": "Construction Site Safety Attachment",
+  "owner": "Administrator",
+  "permissions": [],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

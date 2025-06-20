@@ -1,0 +1,316 @@
+{
+  "autoname": "field:site_name",
+  "creation": "2023-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "site_details_section",
+    "site_name",
+    "site_code",
+    "status",
+    "column_break_4",
+    "site_type",
+    "site_area",
+    "site_area_uom",
+    "location_section",
+    "address",
+    "city",
+    "state",
+    "country",
+    "column_break_12",
+    "postal_code",
+    "latitude",
+    "longitude",
+    "map_view",
+    "contact_section",
+    "site_manager",
+    "site_supervisor",
+    "column_break_19",
+    "contact_person",
+    "contact_email",
+    "contact_phone",
+    "projects_section",
+    "projects",
+    "facilities_section",
+    "facilities",
+    "safety_section",
+    "safety_officer",
+    "emergency_contact",
+    "column_break_29",
+    "safety_checklist_required",
+    "safety_rating",
+    "attachments_section",
+    "site_images",
+    "site_documents"
+  ],
+  "fields": [
+    {
+      "fieldname": "site_details_section",
+      "fieldtype": "Section Break",
+      "label": "Site Details"
+    },
+    {
+      "fieldname": "site_name",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Site Name",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "site_code",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Site Code",
+      "reqd": 1
+    },
+    {
+      "default": "Active",
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Status",
+      "options": "Planning\nActive\nOn Hold\nCompleted\nClosed",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_4",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "site_type",
+      "fieldtype": "Select",
+      "label": "Site Type",
+      "options": "Residential\nCommercial\nIndustrial\nInfrastructure\nMixed Use\nOther"
+    },
+    {
+      "fieldname": "site_area",
+      "fieldtype": "Float",
+      "label": "Site Area"
+    },
+    {
+      "fieldname": "site_area_uom",
+      "fieldtype": "Link",
+      "label": "Site Area UOM",
+      "options": "UOM"
+    },
+    {
+      "fieldname": "location_section",
+      "fieldtype": "Section Break",
+      "label": "Location"
+    },
+    {
+      "fieldname": "address",
+      "fieldtype": "Small Text",
+      "label": "Address"
+    },
+    {
+      "fieldname": "city",
+      "fieldtype": "Data",
+      "label": "City"
+    },
+    {
+      "fieldname": "state",
+      "fieldtype": "Data",
+      "label": "State/Province"
+    },
+    {
+      "fieldname": "country",
+      "fieldtype": "Link",
+      "label": "Country",
+      "options": "Country"
+    },
+    {
+      "fieldname": "column_break_12",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "postal_code",
+      "fieldtype": "Data",
+      "label": "Postal Code"
+    },
+    {
+      "fieldname": "latitude",
+      "fieldtype": "Data",
+      "label": "Latitude"
+    },
+    {
+      "fieldname": "longitude",
+      "fieldtype": "Data",
+      "label": "Longitude"
+    },
+    {
+      "fieldname": "map_view",
+      "fieldtype": "HTML",
+      "label": "Map View",
+      "options": "<div id=\"map-canvas\" style=\"height: 300px; width: 100%;\"></div>"
+    },
+    {
+      "fieldname": "contact_section",
+      "fieldtype": "Section Break",
+      "label": "Contact Information"
+    },
+    {
+      "fieldname": "site_manager",
+      "fieldtype": "Link",
+      "label": "Site Manager",
+      "options": "User"
+    },
+    {
+      "fieldname": "site_supervisor",
+      "fieldtype": "Link",
+      "label": "Site Supervisor",
+      "options": "User"
+    },
+    {
+      "fieldname": "column_break_19",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "contact_person",
+      "fieldtype": "Data",
+      "label": "Contact Person"
+    },
+    {
+      "fieldname": "contact_email",
+      "fieldtype": "Data",
+      "label": "Contact Email",
+      "options": "Email"
+    },
+    {
+      "fieldname": "contact_phone",
+      "fieldtype": "Data",
+      "label": "Contact Phone"
+    },
+    {
+      "fieldname": "projects_section",
+      "fieldtype": "Section Break",
+      "label": "Projects"
+    },
+    {
+      "fieldname": "projects",
+      "fieldtype": "Table",
+      "label": "Projects",
+      "options": "Construction Site Project"
+    },
+    {
+      "fieldname": "facilities_section",
+      "fieldtype": "Section Break",
+      "label": "Facilities"
+    },
+    {
+      "fieldname": "facilities",
+      "fieldtype": "Table",
+      "label": "Facilities",
+      "options": "Construction Site Facility"
+    },
+    {
+      "fieldname": "safety_section",
+      "fieldtype": "Section Break",
+      "label": "Safety Information"
+    },
+    {
+      "fieldname": "safety_officer",
+      "fieldtype": "Link",
+      "label": "Safety Officer",
+      "options": "User"
+    },
+    {
+      "fieldname": "emergency_contact",
+      "fieldtype": "Data",
+      "label": "Emergency Contact Number"
+    },
+    {
+      "fieldname": "column_break_29",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "1",
+      "fieldname": "safety_checklist_required",
+      "fieldtype": "Check",
+      "label": "Safety Checklist Required"
+    },
+    {
+      "fieldname": "safety_rating",
+      "fieldtype": "Rating",
+      "label": "Safety Rating"
+    },
+    {
+      "fieldname": "attachments_section",
+      "fieldtype": "Section Break",
+      "label": "Attachments"
+    },
+    {
+      "fieldname": "site_images",
+      "fieldtype": "Table",
+      "label": "Site Images",
+      "options": "Construction Site Image"
+    },
+    {
+      "fieldname": "site_documents",
+      "fieldtype": "Table",
+      "label": "Site Documents",
+      "options": "Construction Site Document"
+    }
+  ],
+  "modified": "2023-01-01 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Site Management",
+  "name": "Construction Site",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Construction Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 0,
+      "delete": 0,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Construction User",
+      "share": 1,
+      "write": 0
+    },
+    {
+      "create": 0,
+      "delete": 0,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Site Supervisor",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "title_field": "site_name",
+  "track_changes": 1
+}

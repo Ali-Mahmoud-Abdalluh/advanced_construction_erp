@@ -1,0 +1,299 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "project",
+        "estimate_details_section",
+        "estimate_date",
+        "status",
+        "revision_number",
+        "based_on_conceptual_estimate",
+        "conceptual_estimate",
+        "description",
+        "estimate_components_section",
+        "estimate_items",
+        "cost_summary_section",
+        "total_material_cost",
+        "total_labor_cost",
+        "total_equipment_cost",
+        "total_subcontractor_cost",
+        "total_base_cost",
+        "overhead_percentage",
+        "overhead_amount",
+        "profit_percentage",
+        "profit_amount",
+        "contingency_percentage",
+        "contingency_amount",
+        "total_estimated_cost",
+        "approval_section",
+        "prepared_by",
+        "prepared_on",
+        "reviewed_by",
+        "reviewed_on",
+        "approved_by",
+        "approved_on",
+        "rejected_by",
+        "rejected_on",
+        "rejection_reason"
+    ],
+    "fields": [
+        {
+            "fieldname": "project",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Project",
+            "options": "Construction Project",
+            "reqd": 1
+        },
+        {
+            "fieldname": "estimate_details_section",
+            "fieldtype": "Section Break",
+            "label": "Estimate Details"
+        },
+        {
+            "fieldname": "estimate_date",
+            "fieldtype": "Date",
+            "in_list_view": 1,
+            "label": "Estimate Date",
+            "reqd": 1
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Status",
+            "options": "Draft\nSubmitted\nApproved\nRejected\nRevised",
+            "reqd": 1
+        },
+        {
+            "fieldname": "revision_number",
+            "fieldtype": "Int",
+            "label": "Revision Number",
+            "default": 0
+        },
+        {
+            "fieldname": "based_on_conceptual_estimate",
+            "fieldtype": "Check",
+            "label": "Based on Conceptual Estimate"
+        },
+        {
+            "fieldname": "conceptual_estimate",
+            "fieldtype": "Link",
+            "label": "Conceptual Estimate",
+            "options": "Conceptual Estimate",
+            "depends_on": "eval:doc.based_on_conceptual_estimate==1"
+        },
+        {
+            "fieldname": "description",
+            "fieldtype": "Text Editor",
+            "label": "Description"
+        },
+        {
+            "fieldname": "estimate_components_section",
+            "fieldtype": "Section Break",
+            "label": "Estimate Components"
+        },
+        {
+            "fieldname": "estimate_items",
+            "fieldtype": "Table",
+            "label": "Estimate Items",
+            "options": "Preliminary Estimate Item",
+            "reqd": 1
+        },
+        {
+            "fieldname": "cost_summary_section",
+            "fieldtype": "Section Break",
+            "label": "Cost Summary"
+        },
+        {
+            "fieldname": "total_material_cost",
+            "fieldtype": "Currency",
+            "label": "Total Material Cost",
+            "read_only": 1
+        },
+        {
+            "fieldname": "total_labor_cost",
+            "fieldtype": "Currency",
+            "label": "Total Labor Cost",
+            "read_only": 1
+        },
+        {
+            "fieldname": "total_equipment_cost",
+            "fieldtype": "Currency",
+            "label": "Total Equipment Cost",
+            "read_only": 1
+        },
+        {
+            "fieldname": "total_subcontractor_cost",
+            "fieldtype": "Currency",
+            "label": "Total Subcontractor Cost",
+            "read_only": 1
+        },
+        {
+            "fieldname": "total_base_cost",
+            "fieldtype": "Currency",
+            "in_list_view": 1,
+            "label": "Total Base Cost",
+            "read_only": 1
+        },
+        {
+            "fieldname": "overhead_percentage",
+            "fieldtype": "Percent",
+            "label": "Overhead Percentage",
+            "reqd": 1,
+            "default": 10
+        },
+        {
+            "fieldname": "overhead_amount",
+            "fieldtype": "Currency",
+            "label": "Overhead Amount",
+            "read_only": 1
+        },
+        {
+            "fieldname": "profit_percentage",
+            "fieldtype": "Percent",
+            "label": "Profit Percentage",
+            "reqd": 1,
+            "default": 5
+        },
+        {
+            "fieldname": "profit_amount",
+            "fieldtype": "Currency",
+            "label": "Profit Amount",
+            "read_only": 1
+        },
+        {
+            "fieldname": "contingency_percentage",
+            "fieldtype": "Percent",
+            "label": "Contingency Percentage",
+            "reqd": 1,
+            "default": 5
+        },
+        {
+            "fieldname": "contingency_amount",
+            "fieldtype": "Currency",
+            "label": "Contingency Amount",
+            "read_only": 1
+        },
+        {
+            "fieldname": "total_estimated_cost",
+            "fieldtype": "Currency",
+            "in_list_view": 1,
+            "label": "Total Estimated Cost",
+            "read_only": 1
+        },
+        {
+            "fieldname": "approval_section",
+            "fieldtype": "Section Break",
+            "label": "Approval Information"
+        },
+        {
+            "fieldname": "prepared_by",
+            "fieldtype": "Link",
+            "label": "Prepared By",
+            "options": "User",
+            "read_only": 1
+        },
+        {
+            "fieldname": "prepared_on",
+            "fieldtype": "Date",
+            "label": "Prepared On",
+            "read_only": 1
+        },
+        {
+            "fieldname": "reviewed_by",
+            "fieldtype": "Link",
+            "label": "Reviewed By",
+            "options": "User",
+            "read_only": 1
+        },
+        {
+            "fieldname": "reviewed_on",
+            "fieldtype": "Date",
+            "label": "Reviewed On",
+            "read_only": 1
+        },
+        {
+            "fieldname": "approved_by",
+            "fieldtype": "Link",
+            "label": "Approved By",
+            "options": "User",
+            "read_only": 1
+        },
+        {
+            "fieldname": "approved_on",
+            "fieldtype": "Date",
+            "label": "Approved On",
+            "read_only": 1
+        },
+        {
+            "fieldname": "rejected_by",
+            "fieldtype": "Link",
+            "label": "Rejected By",
+            "options": "User",
+            "read_only": 1
+        },
+        {
+            "fieldname": "rejected_on",
+            "fieldtype": "Date",
+            "label": "Rejected On",
+            "read_only": 1
+        },
+        {
+            "fieldname": "rejection_reason",
+            "fieldtype": "Text",
+            "label": "Rejection Reason",
+            "read_only": 1
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2024-01-01 00:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Construction Estimation",
+    "name": "Preliminary Estimate",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Construction Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Construction User",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+} 

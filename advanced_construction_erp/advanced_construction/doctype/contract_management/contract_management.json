@@ -1,0 +1,233 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "contract_details",
+        "contract_number",
+        "contract_type",
+        "project",
+        "client",
+        "contract_date",
+        "start_date",
+        "end_date",
+        "status",
+        "contract_value",
+        "currency",
+        "payment_terms",
+        "retention_percentage",
+        "warranty_period",
+        "contract_terms",
+        "scope_of_work",
+        "deliverables",
+        "milestones",
+        "contract_team",
+        "attachments",
+        "remarks"
+    ],
+    "fields": [
+        {
+            "fieldname": "contract_details",
+            "fieldtype": "Section Break",
+            "label": "Contract Details"
+        },
+        {
+            "fieldname": "contract_number",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Contract Number",
+            "reqd": 1
+        },
+        {
+            "fieldname": "contract_type",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Contract Type",
+            "options": "Fixed Price\nCost Plus\nTime and Material\nUnit Price\nDesign-Build\nEPC\nJoint Venture",
+            "reqd": 1
+        },
+        {
+            "fieldname": "project",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Project",
+            "options": "Construction Project",
+            "reqd": 1
+        },
+        {
+            "fieldname": "client",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Client",
+            "options": "Customer",
+            "reqd": 1
+        },
+        {
+            "fieldname": "contract_date",
+            "fieldtype": "Date",
+            "in_list_view": 1,
+            "label": "Contract Date",
+            "reqd": 1
+        },
+        {
+            "fieldname": "start_date",
+            "fieldtype": "Date",
+            "in_list_view": 1,
+            "label": "Start Date",
+            "reqd": 1
+        },
+        {
+            "fieldname": "end_date",
+            "fieldtype": "Date",
+            "in_list_view": 1,
+            "label": "End Date",
+            "reqd": 1
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Status",
+            "options": "Draft\nActive\nOn Hold\nCompleted\nTerminated",
+            "reqd": 1
+        },
+        {
+            "fieldname": "contract_value",
+            "fieldtype": "Currency",
+            "in_list_view": 1,
+            "label": "Contract Value",
+            "reqd": 1
+        },
+        {
+            "fieldname": "currency",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Currency",
+            "options": "Currency",
+            "reqd": 1
+        },
+        {
+            "fieldname": "payment_terms",
+            "fieldtype": "Section Break",
+            "label": "Payment Terms"
+        },
+        {
+            "fieldname": "retention_percentage",
+            "fieldtype": "Percent",
+            "label": "Retention Percentage",
+            "reqd": 1
+        },
+        {
+            "fieldname": "warranty_period",
+            "fieldtype": "Int",
+            "label": "Warranty Period (Months)",
+            "reqd": 1
+        },
+        {
+            "fieldname": "contract_terms",
+            "fieldtype": "Section Break",
+            "label": "Contract Terms"
+        },
+        {
+            "fieldname": "scope_of_work",
+            "fieldtype": "Text Editor",
+            "label": "Scope of Work",
+            "reqd": 1
+        },
+        {
+            "fieldname": "deliverables",
+            "fieldtype": "Table",
+            "label": "Deliverables",
+            "options": "Contract Deliverable"
+        },
+        {
+            "fieldname": "milestones",
+            "fieldtype": "Table",
+            "label": "Milestones",
+            "options": "Contract Milestone"
+        },
+        {
+            "fieldname": "contract_team",
+            "fieldtype": "Section Break",
+            "label": "Contract Team"
+        },
+        {
+            "fieldname": "contract_manager",
+            "fieldtype": "Link",
+            "label": "Contract Manager",
+            "options": "User",
+            "reqd": 1
+        },
+        {
+            "fieldname": "legal_counsel",
+            "fieldtype": "Link",
+            "label": "Legal Counsel",
+            "options": "User"
+        },
+        {
+            "fieldname": "attachments",
+            "fieldtype": "Section Break",
+            "label": "Attachments"
+        },
+        {
+            "fieldname": "contract_documents",
+            "fieldtype": "Table",
+            "label": "Contract Documents",
+            "options": "Contract Document"
+        },
+        {
+            "fieldname": "remarks",
+            "fieldtype": "Text Editor",
+            "label": "Remarks"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2024-01-01 00:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Construction Project",
+    "name": "Contract Management",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Construction Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Construction User",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": []
+} 

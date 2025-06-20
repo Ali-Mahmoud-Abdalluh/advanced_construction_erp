@@ -1,0 +1,386 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "project_details",
+        "project",
+        "project_name",
+        "construction_type",
+        "status",
+        "progress",
+        "project_manager",
+        "site_engineer",
+        "safety_officer",
+        "quality_controller",
+        "column_break_1",
+        "expected_start_date",
+        "expected_end_date",
+        "actual_start_date",
+        "actual_end_date",
+        "completion_date",
+        "total_budget",
+        "actual_cost",
+        "cost_variance",
+        "section_break_1",
+        "project_tasks",
+        "task_name",
+        "start_date",
+        "end_date",
+        "status",
+        "progress",
+        "assigned_to",
+        "column_break_2",
+        "description",
+        "section_break_2",
+        "budget_items",
+        "item_code",
+        "item_name",
+        "description",
+        "quantity",
+        "unit",
+        "rate",
+        "amount",
+        "column_break_3",
+        "remarks",
+        "section_break_3",
+        "attachments",
+        "file_url",
+        "file_name",
+        "description"
+    ],
+    "fields": [
+        {
+            "fieldname": "project_details",
+            "fieldtype": "Section Break",
+            "label": "Project Details"
+        },
+        {
+            "fieldname": "project",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Project",
+            "options": "Project",
+            "reqd": 1
+        },
+        {
+            "fieldname": "project_name",
+            "fieldtype": "Data",
+            "label": "Project Name",
+            "read_only": 1
+        },
+        {
+            "fieldname": "construction_type",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Construction Type",
+            "options": "Building\nInfrastructure\nIndustrial\nResidential\nCommercial",
+            "reqd": 1
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Status",
+            "options": "Not Started\nIn Progress\nOn Hold\nCompleted\nCancelled",
+            "reqd": 1
+        },
+        {
+            "fieldname": "progress",
+            "fieldtype": "Percent",
+            "in_list_view": 1,
+            "label": "Progress",
+            "read_only": 1
+        },
+        {
+            "fieldname": "project_manager",
+            "fieldtype": "Link",
+            "label": "Project Manager",
+            "options": "User",
+            "reqd": 1
+        },
+        {
+            "fieldname": "site_engineer",
+            "fieldtype": "Link",
+            "label": "Site Engineer",
+            "options": "User"
+        },
+        {
+            "fieldname": "safety_officer",
+            "fieldtype": "Link",
+            "label": "Safety Officer",
+            "options": "User"
+        },
+        {
+            "fieldname": "quality_controller",
+            "fieldtype": "Link",
+            "label": "Quality Controller",
+            "options": "User"
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "expected_start_date",
+            "fieldtype": "Date",
+            "in_list_view": 1,
+            "label": "Expected Start Date",
+            "reqd": 1
+        },
+        {
+            "fieldname": "expected_end_date",
+            "fieldtype": "Date",
+            "in_list_view": 1,
+            "label": "Expected End Date",
+            "reqd": 1
+        },
+        {
+            "fieldname": "actual_start_date",
+            "fieldtype": "Date",
+            "label": "Actual Start Date",
+            "read_only": 1
+        },
+        {
+            "fieldname": "actual_end_date",
+            "fieldtype": "Date",
+            "label": "Actual End Date",
+            "read_only": 1
+        },
+        {
+            "fieldname": "completion_date",
+            "fieldtype": "Date",
+            "label": "Completion Date",
+            "read_only": 1
+        },
+        {
+            "fieldname": "total_budget",
+            "fieldtype": "Currency",
+            "in_list_view": 1,
+            "label": "Total Budget",
+            "reqd": 1
+        },
+        {
+            "fieldname": "actual_cost",
+            "fieldtype": "Currency",
+            "in_list_view": 1,
+            "label": "Actual Cost",
+            "read_only": 1
+        },
+        {
+            "fieldname": "cost_variance",
+            "fieldtype": "Currency",
+            "in_list_view": 1,
+            "label": "Cost Variance",
+            "read_only": 1
+        },
+        {
+            "fieldname": "section_break_1",
+            "fieldtype": "Section Break",
+            "label": "Project Tasks"
+        },
+        {
+            "fieldname": "project_tasks",
+            "fieldtype": "Table",
+            "label": "Project Tasks",
+            "options": "Construction Project Task"
+        },
+        {
+            "fieldname": "task_name",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Task Name",
+            "reqd": 1
+        },
+        {
+            "fieldname": "start_date",
+            "fieldtype": "Date",
+            "in_list_view": 1,
+            "label": "Start Date",
+            "reqd": 1
+        },
+        {
+            "fieldname": "end_date",
+            "fieldtype": "Date",
+            "in_list_view": 1,
+            "label": "End Date",
+            "reqd": 1
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Status",
+            "options": "Not Started\nIn Progress\nOn Hold\nCompleted\nCancelled",
+            "reqd": 1
+        },
+        {
+            "fieldname": "progress",
+            "fieldtype": "Percent",
+            "in_list_view": 1,
+            "label": "Progress",
+            "read_only": 1
+        },
+        {
+            "fieldname": "assigned_to",
+            "fieldtype": "Link",
+            "label": "Assigned To",
+            "options": "User"
+        },
+        {
+            "fieldname": "column_break_2",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "description",
+            "fieldtype": "Text Editor",
+            "label": "Description"
+        },
+        {
+            "fieldname": "section_break_2",
+            "fieldtype": "Section Break",
+            "label": "Budget Items"
+        },
+        {
+            "fieldname": "budget_items",
+            "fieldtype": "Table",
+            "label": "Budget Items",
+            "options": "Construction Project Budget"
+        },
+        {
+            "fieldname": "item_code",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Item Code",
+            "options": "Item",
+            "reqd": 1
+        },
+        {
+            "fieldname": "item_name",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Item Name",
+            "read_only": 1
+        },
+        {
+            "fieldname": "description",
+            "fieldtype": "Small Text",
+            "label": "Description"
+        },
+        {
+            "fieldname": "quantity",
+            "fieldtype": "Float",
+            "in_list_view": 1,
+            "label": "Quantity",
+            "reqd": 1
+        },
+        {
+            "fieldname": "unit",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Unit",
+            "options": "UOM",
+            "reqd": 1
+        },
+        {
+            "fieldname": "rate",
+            "fieldtype": "Currency",
+            "in_list_view": 1,
+            "label": "Rate",
+            "reqd": 1
+        },
+        {
+            "fieldname": "amount",
+            "fieldtype": "Currency",
+            "in_list_view": 1,
+            "label": "Amount",
+            "read_only": 1
+        },
+        {
+            "fieldname": "column_break_3",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "remarks",
+            "fieldtype": "Text Editor",
+            "label": "Remarks"
+        },
+        {
+            "fieldname": "section_break_3",
+            "fieldtype": "Section Break",
+            "label": "Attachments"
+        },
+        {
+            "fieldname": "attachments",
+            "fieldtype": "Table",
+            "label": "Attachments",
+            "options": "File"
+        },
+        {
+            "fieldname": "file_url",
+            "fieldtype": "Attach",
+            "label": "File"
+        },
+        {
+            "fieldname": "file_name",
+            "fieldtype": "Data",
+            "label": "File Name"
+        },
+        {
+            "fieldname": "description",
+            "fieldtype": "Small Text",
+            "label": "Description"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "istable": 0,
+    "links": [],
+    "modified": "2024-01-01 00:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Construction Project",
+    "name": "Construction Project",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Construction Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Construction User",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": []
+} 

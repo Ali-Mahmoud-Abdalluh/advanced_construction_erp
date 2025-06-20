@@ -1,0 +1,219 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "item_code",
+        "item_name",
+        "description",
+        "details_section",
+        "csi_division",
+        "csi_subdivision",
+        "specification_reference",
+        "item_category",
+        "unit",
+        "historic_rates_section",
+        "current_rate",
+        "current_rate_date",
+        "rate_history",
+        "rate_indexing_section",
+        "base_index",
+        "base_index_date",
+        "current_index",
+        "current_index_date",
+        "location_section",
+        "country",
+        "region",
+        "city",
+        "project_references_section",
+        "projects"
+    ],
+    "fields": [
+        {
+            "fieldname": "item_code",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Item Code",
+            "reqd": 1,
+            "unique": 1
+        },
+        {
+            "fieldname": "item_name",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Item Name",
+            "reqd": 1
+        },
+        {
+            "fieldname": "description",
+            "fieldtype": "Text Editor",
+            "label": "Description"
+        },
+        {
+            "fieldname": "details_section",
+            "fieldtype": "Section Break",
+            "label": "Item Details"
+        },
+        {
+            "fieldname": "csi_division",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "CSI Division",
+            "options": "01 - General Requirements\n02 - Site Construction\n03 - Concrete\n04 - Masonry\n05 - Metals\n06 - Wood and Plastics\n07 - Thermal and Moisture Protection\n08 - Doors and Windows\n09 - Finishes\n10 - Specialties\n11 - Equipment\n12 - Furnishings\n13 - Special Construction\n14 - Conveying Systems\n15 - Mechanical\n16 - Electrical"
+        },
+        {
+            "fieldname": "csi_subdivision",
+            "fieldtype": "Data",
+            "label": "CSI Subdivision"
+        },
+        {
+            "fieldname": "specification_reference",
+            "fieldtype": "Data",
+            "label": "Specification Reference"
+        },
+        {
+            "fieldname": "item_category",
+            "fieldtype": "Select",
+            "label": "Item Category",
+            "options": "Material\nLabor\nEquipment\nSubcontractor\nAssembly\nPackage"
+        },
+        {
+            "fieldname": "unit",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Unit",
+            "options": "m\nm²\nm³\nkg\nton\neach\nlot\nday\nhour\nweek\nmonth\nls",
+            "reqd": 1
+        },
+        {
+            "fieldname": "historic_rates_section",
+            "fieldtype": "Section Break",
+            "label": "Historic Rates"
+        },
+        {
+            "fieldname": "current_rate",
+            "fieldtype": "Currency",
+            "in_list_view": 1,
+            "label": "Current Rate",
+            "reqd": 1
+        },
+        {
+            "fieldname": "current_rate_date",
+            "fieldtype": "Date",
+            "label": "Current Rate Date",
+            "reqd": 1
+        },
+        {
+            "fieldname": "rate_history",
+            "fieldtype": "Table",
+            "label": "Rate History",
+            "options": "Historical Rate Record"
+        },
+        {
+            "fieldname": "rate_indexing_section",
+            "fieldtype": "Section Break",
+            "label": "Rate Indexing"
+        },
+        {
+            "fieldname": "base_index",
+            "fieldtype": "Float",
+            "label": "Base Index"
+        },
+        {
+            "fieldname": "base_index_date",
+            "fieldtype": "Date",
+            "label": "Base Index Date"
+        },
+        {
+            "fieldname": "current_index",
+            "fieldtype": "Float",
+            "label": "Current Index"
+        },
+        {
+            "fieldname": "current_index_date",
+            "fieldtype": "Date",
+            "label": "Current Index Date"
+        },
+        {
+            "fieldname": "location_section",
+            "fieldtype": "Section Break",
+            "label": "Location"
+        },
+        {
+            "fieldname": "country",
+            "fieldtype": "Link",
+            "label": "Country",
+            "options": "Country"
+        },
+        {
+            "fieldname": "region",
+            "fieldtype": "Data",
+            "label": "Region/State"
+        },
+        {
+            "fieldname": "city",
+            "fieldtype": "Data",
+            "label": "City"
+        },
+        {
+            "fieldname": "project_references_section",
+            "fieldtype": "Section Break",
+            "label": "Project References"
+        },
+        {
+            "fieldname": "projects",
+            "fieldtype": "Table",
+            "label": "Projects",
+            "options": "Historical Rate Project Reference"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2024-01-01 00:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Construction Estimation",
+    "name": "Historical Rate Database",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Construction Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Construction User",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+} 

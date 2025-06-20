@@ -1,0 +1,262 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "BUDGET-.YYYY.-.####",
+ "creation": "2023-10-15 12:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_information_section",
+  "project_name",
+  "project_estimation",
+  "status",
+  "column_break_4",
+  "total_budget",
+  "currency",
+  "expected_start_date",
+  "expected_completion_date",
+  "section_break_9",
+  "description",
+  "budget_details_section",
+  "budget_categories",
+  "section_break_13",
+  "total_budgeted_amount",
+  "total_actual_spent",
+  "column_break_16",
+  "total_variance",
+  "variance_percentage",
+  "section_break_19",
+  "budget_approval_section",
+  "approval_status",
+  "approved_by",
+  "approval_date",
+  "column_break_24",
+  "approval_comments",
+  "section_break_26",
+  "notes",
+  "attachments_section",
+  "attachments"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_information_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "label": "Project Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "project_estimation",
+   "fieldtype": "Link",
+   "label": "Project Estimation",
+   "options": "Project Estimation"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nIn Progress\nCompleted\nApproved\nRejected"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_budget",
+   "fieldtype": "Currency",
+   "label": "Total Budget",
+   "reqd": 1
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "expected_start_date",
+   "fieldtype": "Date",
+   "label": "Expected Start Date"
+  },
+  {
+   "fieldname": "expected_completion_date",
+   "fieldtype": "Date",
+   "label": "Expected Completion Date"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "budget_details_section",
+   "fieldtype": "Section Break",
+   "label": "Budget Details"
+  },
+  {
+   "fieldname": "budget_categories",
+   "fieldtype": "Table",
+   "label": "Budget Categories",
+   "options": "Project Budget Category",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break",
+   "label": "Summary"
+  },
+  {
+   "fieldname": "total_budgeted_amount",
+   "fieldtype": "Currency",
+   "label": "Total Budgeted Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_actual_spent",
+   "fieldtype": "Currency",
+   "label": "Total Actual Spent",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_variance",
+   "fieldtype": "Currency",
+   "label": "Total Variance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "variance_percentage",
+   "fieldtype": "Percent",
+   "label": "Variance Percentage",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_19",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "budget_approval_section",
+   "fieldtype": "Section Break",
+   "label": "Budget Approval"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "approval_status",
+   "fieldtype": "Select",
+   "label": "Approval Status",
+   "options": "Pending\nApproved\nRejected\nRevision Required"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "approval_date",
+   "fieldtype": "Date",
+   "label": "Approval Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approval_comments",
+   "fieldtype": "Small Text",
+   "label": "Approval Comments"
+  },
+  {
+   "fieldname": "section_break_26",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "attachments_section",
+   "fieldtype": "Section Break",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Attach",
+   "label": "Attachments"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-15 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Pre Construction",
+ "name": "Project Budget",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Construction Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Construction User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Construction Viewer",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

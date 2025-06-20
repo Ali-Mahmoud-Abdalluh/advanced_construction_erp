@@ -1,0 +1,65 @@
+{
+    "actions": [],
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "project",
+        "project_name",
+        "rate_used",
+        "usage_date",
+        "location",
+        "notes"
+    ],
+    "fields": [
+        {
+            "fieldname": "project",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Project",
+            "options": "Construction Project",
+            "reqd": 1
+        },
+        {
+            "fieldname": "project_name",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Project Name",
+            "fetch_from": "project.project_name",
+            "read_only": 1
+        },
+        {
+            "fieldname": "rate_used",
+            "fieldtype": "Currency",
+            "in_list_view": 1,
+            "label": "Rate Used"
+        },
+        {
+            "fieldname": "usage_date",
+            "fieldtype": "Date",
+            "in_list_view": 1,
+            "label": "Usage Date"
+        },
+        {
+            "fieldname": "location",
+            "fieldtype": "Data",
+            "label": "Location"
+        },
+        {
+            "fieldname": "notes",
+            "fieldtype": "Text",
+            "label": "Notes"
+        }
+    ],
+    "istable": 1,
+    "modified": "2024-01-01 00:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Construction Estimation",
+    "name": "Historical Rate Project Reference",
+    "owner": "Administrator",
+    "permissions": [],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+} 

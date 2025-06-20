@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "phase_name",
+  "phase_description",
+  "start_date",
+  "end_date",
+  "duration",
+  "duration_unit",
+  "column_break_7",
+  "estimated_cost",
+  "currency",
+  "dependencies",
+  "critical_path",
+  "phase_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "phase_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Phase Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phase_description",
+   "fieldtype": "Small Text",
+   "label": "Phase Description"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "End Date"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Int",
+   "label": "Duration"
+  },
+  {
+   "fieldname": "duration_unit",
+   "fieldtype": "Select",
+   "label": "Duration Unit",
+   "options": "Days\nWeeks\nMonths",
+   "default": "Days"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "estimated_cost",
+   "fieldtype": "Currency",
+   "label": "Estimated Cost"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "dependencies",
+   "fieldtype": "Data",
+   "label": "Dependencies",
+   "description": "Comma-separated list of dependent phase names"
+  },
+  {
+   "fieldname": "critical_path",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Critical Path",
+   "default": 0
+  },
+  {
+   "fieldname": "phase_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Phase Status",
+   "options": "Planned\nIn Progress\nCompleted\nDelayed\nCancelled",
+   "default": "Planned"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2023-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Pre Construction",
+ "name": "Project Phase",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,275 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "estimation_title",
+  "project",
+  "estimation_type",
+  "column_break_5",
+  "estimation_date",
+  "status",
+  "prepared_by",
+  "approved_by",
+  "section_break_10",
+  "project_description",
+  "scope_of_work",
+  "section_break_13",
+  "estimation_items",
+  "section_break_15",
+  "total_material_cost",
+  "total_labor_cost",
+  "total_equipment_cost",
+  "column_break_19",
+  "total_overhead_cost",
+  "contingency_percentage",
+  "contingency_amount",
+  "column_break_23",
+  "profit_margin_percentage",
+  "profit_margin_amount",
+  "total_estimated_cost",
+  "section_break_27",
+  "assumptions",
+  "exclusions",
+  "column_break_30",
+  "risk_factors",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "EST-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "estimation_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Estimation Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project",
+   "options": "Construction Project"
+  },
+  {
+   "fieldname": "estimation_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Estimation Type",
+   "options": "Preliminary\nDetailed\nRevised\nFinal",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "estimation_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Estimation Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nUnder Review\nApproved\nRejected\nRevision Required",
+   "reqd": 1
+  },
+  {
+   "fieldname": "prepared_by",
+   "fieldtype": "Link",
+   "label": "Prepared By",
+   "options": "User"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break",
+   "label": "Project Details"
+  },
+  {
+   "fieldname": "project_description",
+   "fieldtype": "Text Editor",
+   "label": "Project Description"
+  },
+  {
+   "fieldname": "scope_of_work",
+   "fieldtype": "Text Editor",
+   "label": "Scope of Work"
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break",
+   "label": "Estimation Items"
+  },
+  {
+   "fieldname": "estimation_items",
+   "fieldtype": "Table",
+   "label": "Estimation Items",
+   "options": "Cost Estimation Item"
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break",
+   "label": "Cost Summary"
+  },
+  {
+   "fieldname": "total_material_cost",
+   "fieldtype": "Currency",
+   "label": "Total Material Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_labor_cost",
+   "fieldtype": "Currency",
+   "label": "Total Labor Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_equipment_cost",
+   "fieldtype": "Currency",
+   "label": "Total Equipment Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_overhead_cost",
+   "fieldtype": "Currency",
+   "label": "Total Overhead Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "contingency_percentage",
+   "fieldtype": "Percent",
+   "label": "Contingency %"
+  },
+  {
+   "fieldname": "contingency_amount",
+   "fieldtype": "Currency",
+   "label": "Contingency Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "profit_margin_percentage",
+   "fieldtype": "Percent",
+   "label": "Profit Margin %"
+  },
+  {
+   "fieldname": "profit_margin_amount",
+   "fieldtype": "Currency",
+   "label": "Profit Margin Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_estimated_cost",
+   "fieldtype": "Currency",
+   "label": "Total Estimated Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_27",
+   "fieldtype": "Section Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "assumptions",
+   "fieldtype": "Text Editor",
+   "label": "Assumptions"
+  },
+  {
+   "fieldname": "exclusions",
+   "fieldtype": "Text Editor",
+   "label": "Exclusions"
+  },
+  {
+   "fieldname": "column_break_30",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "risk_factors",
+   "fieldtype": "Text Editor",
+   "label": "Risk Factors"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Construction Estimation",
+ "name": "Cost Estimation",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Construction Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Estimation Engineer",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

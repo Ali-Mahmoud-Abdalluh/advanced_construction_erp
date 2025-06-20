@@ -1,0 +1,323 @@
+{
+    "actions": [],
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "specification_reference",
+        "csi_division",
+        "csi_subdivision",
+        "item_code",
+        "description",
+        "drawing_reference",
+        "quantity_section",
+        "quantity",
+        "unit",
+        "quantity_details",
+        "material_section",
+        "material_description",
+        "material_quantity",
+        "material_unit",
+        "material_rate",
+        "material_amount",
+        "material_waste_percentage",
+        "material_waste_amount",
+        "total_material_amount",
+        "labor_section",
+        "labor_description",
+        "labor_hours",
+        "labor_rate",
+        "labor_amount",
+        "labor_productivity_factor",
+        "labor_productivity_amount",
+        "total_labor_amount",
+        "equipment_section",
+        "equipment_description",
+        "equipment_hours",
+        "equipment_rate",
+        "equipment_amount",
+        "equipment_efficiency_factor",
+        "equipment_efficiency_amount",
+        "total_equipment_amount",
+        "subcontractor_section",
+        "subcontractor_description",
+        "subcontractor_quote_amount",
+        "subcontractor_markup_percentage",
+        "subcontractor_markup_amount",
+        "total_subcontractor_amount",
+        "item_total_section",
+        "unit_cost",
+        "total_cost",
+        "remarks"
+    ],
+    "fields": [
+        {
+            "fieldname": "specification_reference",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Specification Reference"
+        },
+        {
+            "fieldname": "csi_division",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "CSI Division",
+            "options": "01 - General Requirements\n02 - Site Construction\n03 - Concrete\n04 - Masonry\n05 - Metals\n06 - Wood and Plastics\n07 - Thermal and Moisture Protection\n08 - Doors and Windows\n09 - Finishes\n10 - Specialties\n11 - Equipment\n12 - Furnishings\n13 - Special Construction\n14 - Conveying Systems\n15 - Mechanical\n16 - Electrical",
+            "reqd": 1
+        },
+        {
+            "fieldname": "csi_subdivision",
+            "fieldtype": "Data",
+            "label": "CSI Subdivision"
+        },
+        {
+            "fieldname": "item_code",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Item Code",
+            "reqd": 1
+        },
+        {
+            "fieldname": "description",
+            "fieldtype": "Text",
+            "in_list_view": 1,
+            "label": "Description",
+            "reqd": 1
+        },
+        {
+            "fieldname": "drawing_reference",
+            "fieldtype": "Data",
+            "label": "Drawing Reference"
+        },
+        {
+            "fieldname": "quantity_section",
+            "fieldtype": "Section Break",
+            "label": "Quantity"
+        },
+        {
+            "fieldname": "quantity",
+            "fieldtype": "Float",
+            "in_list_view": 1,
+            "label": "Quantity",
+            "reqd": 1
+        },
+        {
+            "fieldname": "unit",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Unit",
+            "options": "m\nm²\nm³\nkg\nton\neach\nlot\nday\nhour\nweek\nmonth",
+            "reqd": 1
+        },
+        {
+            "fieldname": "quantity_details",
+            "fieldtype": "Text",
+            "label": "Quantity Calculation Details"
+        },
+        {
+            "fieldname": "material_section",
+            "fieldtype": "Section Break",
+            "label": "Material"
+        },
+        {
+            "fieldname": "material_description",
+            "fieldtype": "Data",
+            "label": "Material Description"
+        },
+        {
+            "fieldname": "material_quantity",
+            "fieldtype": "Float",
+            "label": "Material Quantity"
+        },
+        {
+            "fieldname": "material_unit",
+            "fieldtype": "Select",
+            "label": "Material Unit",
+            "options": "m\nm²\nm³\nkg\nton\neach\nlot\nday\nhour\nweek\nmonth"
+        },
+        {
+            "fieldname": "material_rate",
+            "fieldtype": "Currency",
+            "label": "Material Rate"
+        },
+        {
+            "fieldname": "material_amount",
+            "fieldtype": "Currency",
+            "label": "Material Amount",
+            "read_only": 1
+        },
+        {
+            "fieldname": "material_waste_percentage",
+            "fieldtype": "Percent",
+            "label": "Material Waste Percentage",
+            "default": 5
+        },
+        {
+            "fieldname": "material_waste_amount",
+            "fieldtype": "Currency",
+            "label": "Material Waste Amount",
+            "read_only": 1
+        },
+        {
+            "fieldname": "total_material_amount",
+            "fieldtype": "Currency",
+            "label": "Total Material Amount",
+            "read_only": 1
+        },
+        {
+            "fieldname": "labor_section",
+            "fieldtype": "Section Break",
+            "label": "Labor"
+        },
+        {
+            "fieldname": "labor_description",
+            "fieldtype": "Data",
+            "label": "Labor Description"
+        },
+        {
+            "fieldname": "labor_hours",
+            "fieldtype": "Float",
+            "label": "Labor Hours"
+        },
+        {
+            "fieldname": "labor_rate",
+            "fieldtype": "Currency",
+            "label": "Labor Rate"
+        },
+        {
+            "fieldname": "labor_amount",
+            "fieldtype": "Currency",
+            "label": "Labor Amount",
+            "read_only": 1
+        },
+        {
+            "fieldname": "labor_productivity_factor",
+            "fieldtype": "Float",
+            "label": "Labor Productivity Factor",
+            "default": 1
+        },
+        {
+            "fieldname": "labor_productivity_amount",
+            "fieldtype": "Currency",
+            "label": "Labor Productivity Adjustment",
+            "read_only": 1
+        },
+        {
+            "fieldname": "total_labor_amount",
+            "fieldtype": "Currency",
+            "label": "Total Labor Amount",
+            "read_only": 1
+        },
+        {
+            "fieldname": "equipment_section",
+            "fieldtype": "Section Break",
+            "label": "Equipment"
+        },
+        {
+            "fieldname": "equipment_description",
+            "fieldtype": "Data",
+            "label": "Equipment Description"
+        },
+        {
+            "fieldname": "equipment_hours",
+            "fieldtype": "Float",
+            "label": "Equipment Hours"
+        },
+        {
+            "fieldname": "equipment_rate",
+            "fieldtype": "Currency",
+            "label": "Equipment Rate"
+        },
+        {
+            "fieldname": "equipment_amount",
+            "fieldtype": "Currency",
+            "label": "Equipment Amount",
+            "read_only": 1
+        },
+        {
+            "fieldname": "equipment_efficiency_factor",
+            "fieldtype": "Float",
+            "label": "Equipment Efficiency Factor",
+            "default": 1
+        },
+        {
+            "fieldname": "equipment_efficiency_amount",
+            "fieldtype": "Currency",
+            "label": "Equipment Efficiency Adjustment",
+            "read_only": 1
+        },
+        {
+            "fieldname": "total_equipment_amount",
+            "fieldtype": "Currency",
+            "label": "Total Equipment Amount",
+            "read_only": 1
+        },
+        {
+            "fieldname": "subcontractor_section",
+            "fieldtype": "Section Break",
+            "label": "Subcontractor"
+        },
+        {
+            "fieldname": "subcontractor_description",
+            "fieldtype": "Data",
+            "label": "Subcontractor Description"
+        },
+        {
+            "fieldname": "subcontractor_quote_amount",
+            "fieldtype": "Currency",
+            "label": "Subcontractor Quote Amount"
+        },
+        {
+            "fieldname": "subcontractor_markup_percentage",
+            "fieldtype": "Percent",
+            "label": "Subcontractor Markup Percentage",
+            "default": 10
+        },
+        {
+            "fieldname": "subcontractor_markup_amount",
+            "fieldtype": "Currency",
+            "label": "Subcontractor Markup Amount",
+            "read_only": 1
+        },
+        {
+            "fieldname": "total_subcontractor_amount",
+            "fieldtype": "Currency",
+            "label": "Total Subcontractor Amount",
+            "read_only": 1
+        },
+        {
+            "fieldname": "item_total_section",
+            "fieldtype": "Section Break",
+            "label": "Item Total"
+        },
+        {
+            "fieldname": "unit_cost",
+            "fieldtype": "Currency",
+            "label": "Unit Cost",
+            "read_only": 1
+        },
+        {
+            "fieldname": "total_cost",
+            "fieldtype": "Currency",
+            "in_list_view": 1,
+            "label": "Total Cost",
+            "read_only": 1
+        },
+        {
+            "fieldname": "remarks",
+            "fieldtype": "Text",
+            "label": "Remarks"
+        }
+    ],
+    "istable": 1,
+    "modified": "2024-01-01 00:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Construction Estimation",
+    "name": "Detailed Estimate Item",
+    "owner": "Administrator",
+    "permissions": [],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+} 

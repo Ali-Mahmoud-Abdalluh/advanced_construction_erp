@@ -1,0 +1,255 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "pricing_strategy_name",
+        "description",
+        "strategy_details_section",
+        "strategy_type",
+        "pricing_method",
+        "applicable_item_categories",
+        "applicable_projects",
+        "pricing_rules_section",
+        "base_pricing_source",
+        "markup_percentage",
+        "volume_discount_enabled",
+        "volume_discount_brackets",
+        "location_adjustment_enabled",
+        "location_adjustments",
+        "seasonal_adjustment_enabled",
+        "seasonal_adjustments",
+        "competitive_adjustment_enabled",
+        "competitive_adjustments",
+        "risk_adjustment_enabled",
+        "risk_adjustments",
+        "market_condition_adjustment_enabled",
+        "market_condition_percentage",
+        "market_condition_notes",
+        "activation_section",
+        "is_active",
+        "effective_from",
+        "effective_to",
+        "priority"
+    ],
+    "fields": [
+        {
+            "fieldname": "pricing_strategy_name",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Pricing Strategy Name",
+            "reqd": 1,
+            "unique": 1
+        },
+        {
+            "fieldname": "description",
+            "fieldtype": "Text Editor",
+            "label": "Description"
+        },
+        {
+            "fieldname": "strategy_details_section",
+            "fieldtype": "Section Break",
+            "label": "Strategy Details"
+        },
+        {
+            "fieldname": "strategy_type",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Strategy Type",
+            "options": "Standard\nCost Plus\nValue Based\nCompetitive\nPromotional\nProject-Specific",
+            "reqd": 1
+        },
+        {
+            "fieldname": "pricing_method",
+            "fieldtype": "Select",
+            "label": "Pricing Method",
+            "options": "Fixed Price\nUnit Rate\nPercentage\nDynamic",
+            "reqd": 1
+        },
+        {
+            "fieldname": "applicable_item_categories",
+            "fieldtype": "Table MultiSelect",
+            "label": "Applicable Item Categories",
+            "options": "Dynamic Pricing Item Category"
+        },
+        {
+            "fieldname": "applicable_projects",
+            "fieldtype": "Table MultiSelect",
+            "label": "Applicable Projects",
+            "options": "Dynamic Pricing Project"
+        },
+        {
+            "fieldname": "pricing_rules_section",
+            "fieldtype": "Section Break",
+            "label": "Pricing Rules"
+        },
+        {
+            "fieldname": "base_pricing_source",
+            "fieldtype": "Select",
+            "label": "Base Pricing Source",
+            "options": "Historical Rates\nCost Database\nQuotation\nMarket Rate\nManual Entry",
+            "reqd": 1
+        },
+        {
+            "fieldname": "markup_percentage",
+            "fieldtype": "Percent",
+            "label": "Markup Percentage",
+            "default": 10
+        },
+        {
+            "fieldname": "volume_discount_enabled",
+            "fieldtype": "Check",
+            "label": "Volume Discount Enabled"
+        },
+        {
+            "fieldname": "volume_discount_brackets",
+            "fieldtype": "Table",
+            "label": "Volume Discount Brackets",
+            "options": "Dynamic Pricing Volume Discount",
+            "depends_on": "eval:doc.volume_discount_enabled==1"
+        },
+        {
+            "fieldname": "location_adjustment_enabled",
+            "fieldtype": "Check",
+            "label": "Location Adjustment Enabled"
+        },
+        {
+            "fieldname": "location_adjustments",
+            "fieldtype": "Table",
+            "label": "Location Adjustments",
+            "options": "Dynamic Pricing Location Adjustment",
+            "depends_on": "eval:doc.location_adjustment_enabled==1"
+        },
+        {
+            "fieldname": "seasonal_adjustment_enabled",
+            "fieldtype": "Check",
+            "label": "Seasonal Adjustment Enabled"
+        },
+        {
+            "fieldname": "seasonal_adjustments",
+            "fieldtype": "Table",
+            "label": "Seasonal Adjustments",
+            "options": "Dynamic Pricing Seasonal Adjustment",
+            "depends_on": "eval:doc.seasonal_adjustment_enabled==1"
+        },
+        {
+            "fieldname": "competitive_adjustment_enabled",
+            "fieldtype": "Check",
+            "label": "Competitive Adjustment Enabled"
+        },
+        {
+            "fieldname": "competitive_adjustments",
+            "fieldtype": "Table",
+            "label": "Competitive Adjustments",
+            "options": "Dynamic Pricing Competitive Adjustment",
+            "depends_on": "eval:doc.competitive_adjustment_enabled==1"
+        },
+        {
+            "fieldname": "risk_adjustment_enabled",
+            "fieldtype": "Check",
+            "label": "Risk Adjustment Enabled"
+        },
+        {
+            "fieldname": "risk_adjustments",
+            "fieldtype": "Table",
+            "label": "Risk Adjustments",
+            "options": "Dynamic Pricing Risk Adjustment",
+            "depends_on": "eval:doc.risk_adjustment_enabled==1"
+        },
+        {
+            "fieldname": "market_condition_adjustment_enabled",
+            "fieldtype": "Check",
+            "label": "Market Condition Adjustment Enabled"
+        },
+        {
+            "fieldname": "market_condition_percentage",
+            "fieldtype": "Float",
+            "label": "Market Condition Percentage",
+            "depends_on": "eval:doc.market_condition_adjustment_enabled==1"
+        },
+        {
+            "fieldname": "market_condition_notes",
+            "fieldtype": "Text",
+            "label": "Market Condition Notes",
+            "depends_on": "eval:doc.market_condition_adjustment_enabled==1"
+        },
+        {
+            "fieldname": "activation_section",
+            "fieldtype": "Section Break",
+            "label": "Activation"
+        },
+        {
+            "fieldname": "is_active",
+            "fieldtype": "Check",
+            "label": "Is Active",
+            "default": 1
+        },
+        {
+            "fieldname": "effective_from",
+            "fieldtype": "Date",
+            "label": "Effective From",
+            "reqd": 1
+        },
+        {
+            "fieldname": "effective_to",
+            "fieldtype": "Date",
+            "label": "Effective To"
+        },
+        {
+            "fieldname": "priority",
+            "fieldtype": "Int",
+            "label": "Priority",
+            "default": 1,
+            "description": "Higher number means higher priority"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2024-01-01 00:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Construction Estimation",
+    "name": "Dynamic Pricing",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Construction Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 0,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Construction User",
+            "share": 1,
+            "write": 0
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+} 

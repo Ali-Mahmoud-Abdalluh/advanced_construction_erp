@@ -1,0 +1,340 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "CONST-OPP-.YYYY.-.#####",
+ "creation": "2023-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "opportunity_details_section",
+  "opportunity_from",
+  "customer_name",
+  "lead",
+  "contact_person",
+  "contact_email",
+  "contact_mobile",
+  "status",
+  "column_break_8",
+  "opportunity_date",
+  "expected_closing_date",
+  "probability",
+  "forecasted_revenue",
+  "opportunity_owner",
+  "opportunity_description",
+  "project_information_section",
+  "project_type",
+  "estimated_budget",
+  "site_location",
+  "column_break_17",
+  "site_area",
+  "estimated_duration",
+  "expected_start_date",
+  "project_requirements",
+  "competition_section",
+  "competing_companies",
+  "competitive_factors",
+  "competitive_strengths",
+  "competitive_weaknesses",
+  "column_break_24",
+  "estimated_winning_price",
+  "pricing_strategy",
+  "market_conditions",
+  "decision_makers",
+  "risk_assessment_section",
+  "risk_factors",
+  "mitigating_actions",
+  "opportunity_score",
+  "notes_section",
+  "next_steps",
+  "additional_notes",
+  "client_requirements",
+  "attachments_section",
+  "attachments"
+ ],
+ "fields": [
+  {
+   "fieldname": "opportunity_details_section",
+   "fieldtype": "Section Break",
+   "label": "Opportunity Details"
+  },
+  {
+   "fieldname": "opportunity_from",
+   "fieldtype": "Select",
+   "label": "Opportunity From",
+   "options": "Lead\nCustomer\nPartner\nReference"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name"
+  },
+  {
+   "fieldname": "lead",
+   "fieldtype": "Link",
+   "label": "Lead",
+   "options": "Construction Lead"
+  },
+  {
+   "fieldname": "contact_person",
+   "fieldtype": "Data",
+   "label": "Contact Person"
+  },
+  {
+   "fieldname": "contact_email",
+   "fieldtype": "Data",
+   "label": "Contact Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "contact_mobile",
+   "fieldtype": "Data",
+   "label": "Contact Mobile",
+   "options": "Phone"
+  },
+  {
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nQualified\nWon\nLost\nClosed"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "opportunity_date",
+   "fieldtype": "Date",
+   "label": "Opportunity Date"
+  },
+  {
+   "fieldname": "expected_closing_date",
+   "fieldtype": "Date",
+   "label": "Expected Closing Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "probability",
+   "fieldtype": "Percent",
+   "label": "Probability"
+  },
+  {
+   "fieldname": "forecasted_revenue",
+   "fieldtype": "Currency",
+   "label": "Forecasted Revenue",
+   "read_only": 1
+  },
+  {
+   "fieldname": "opportunity_owner",
+   "fieldtype": "Link",
+   "label": "Opportunity Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "opportunity_description",
+   "fieldtype": "Text Editor",
+   "label": "Opportunity Description"
+  },
+  {
+   "fieldname": "project_information_section",
+   "fieldtype": "Section Break",
+   "label": "Project Information"
+  },
+  {
+   "fieldname": "project_type",
+   "fieldtype": "Select",
+   "label": "Project Type",
+   "options": "Residential\nCommercial\nIndustrial\nInfrastructure\nHospitality\nEducational\nHealthcare\nMixed-Use\nOther"
+  },
+  {
+   "fieldname": "estimated_budget",
+   "fieldtype": "Currency",
+   "label": "Estimated Budget"
+  },
+  {
+   "fieldname": "site_location",
+   "fieldtype": "Data",
+   "label": "Site Location"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "site_area",
+   "fieldtype": "Float",
+   "label": "Site Area (sq. meters)"
+  },
+  {
+   "fieldname": "estimated_duration",
+   "fieldtype": "Int",
+   "label": "Estimated Duration (days)"
+  },
+  {
+   "fieldname": "expected_start_date",
+   "fieldtype": "Date",
+   "label": "Expected Start Date"
+  },
+  {
+   "fieldname": "project_requirements",
+   "fieldtype": "Text Editor",
+   "label": "Project Requirements"
+  },
+  {
+   "fieldname": "competition_section",
+   "fieldtype": "Section Break",
+   "label": "Competition Analysis"
+  },
+  {
+   "fieldname": "competing_companies",
+   "fieldtype": "Table",
+   "label": "Competing Companies",
+   "options": "Competitor"
+  },
+  {
+   "fieldname": "competitive_factors",
+   "fieldtype": "Text Editor",
+   "label": "Competitive Factors"
+  },
+  {
+   "fieldname": "competitive_strengths",
+   "fieldtype": "Text Editor",
+   "label": "Our Strengths"
+  },
+  {
+   "fieldname": "competitive_weaknesses",
+   "fieldtype": "Text Editor",
+   "label": "Our Weaknesses"
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "estimated_winning_price",
+   "fieldtype": "Currency",
+   "label": "Estimated Winning Price"
+  },
+  {
+   "fieldname": "pricing_strategy",
+   "fieldtype": "Text Editor",
+   "label": "Pricing Strategy"
+  },
+  {
+   "fieldname": "market_conditions",
+   "fieldtype": "Text Editor",
+   "label": "Market Conditions"
+  },
+  {
+   "fieldname": "decision_makers",
+   "fieldtype": "Text",
+   "label": "Decision Makers"
+  },
+  {
+   "fieldname": "risk_assessment_section",
+   "fieldtype": "Section Break",
+   "label": "Risk Assessment"
+  },
+  {
+   "fieldname": "risk_factors",
+   "fieldtype": "Table",
+   "label": "Risk Factors",
+   "options": "Risk Factor"
+  },
+  {
+   "fieldname": "mitigating_actions",
+   "fieldtype": "Text Editor",
+   "label": "Mitigating Actions"
+  },
+  {
+   "fieldname": "opportunity_score",
+   "fieldtype": "Float",
+   "label": "Opportunity Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes and Requirements"
+  },
+  {
+   "fieldname": "next_steps",
+   "fieldtype": "Text Editor",
+   "label": "Next Steps"
+  },
+  {
+   "fieldname": "additional_notes",
+   "fieldtype": "Text Editor",
+   "label": "Additional Notes"
+  },
+  {
+   "fieldname": "client_requirements",
+   "fieldtype": "Table",
+   "label": "Client Requirements",
+   "options": "Requirement Item"
+  },
+  {
+   "fieldname": "attachments_section",
+   "fieldtype": "Section Break",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Table",
+   "label": "Attachments",
+   "options": "File"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Pre Construction",
+ "name": "Construction Opportunity",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+} 

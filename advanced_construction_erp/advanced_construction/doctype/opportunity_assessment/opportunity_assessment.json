@@ -1,0 +1,529 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:assessment_name",
+ "creation": "2023-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_information_section",
+  "assessment_name",
+  "status",
+  "lead_reference",
+  "lead_name",
+  "column_break_5",
+  "assessment_date",
+  "assessed_by",
+  "organization",
+  "project_information_section",
+  "project_type",
+  "project_description",
+  "estimated_budget",
+  "currency",
+  "column_break_14",
+  "expected_start_date",
+  "expected_completion_date",
+  "project_location",
+  "market_analysis_section",
+  "market_conditions",
+  "market_growth_potential",
+  "column_break_20",
+  "competitive_landscape",
+  "market_entry_barriers",
+  "risk_reward_analysis_section",
+  "risk_factors_tab",
+  "financial_risks",
+  "technical_risks",
+  "regulatory_risks",
+  "market_risks",
+  "column_break_28",
+  "overall_risk_rating",
+  "risk_mitigation_strategies",
+  "reward_factors_tab",
+  "potential_profit_margin",
+  "strategic_value",
+  "future_opportunities",
+  "column_break_35",
+  "overall_reward_rating",
+  "reward_enhancement_strategies",
+  "resource_assessment_section",
+  "resource_availability_tab",
+  "human_resources_availability",
+  "equipment_availability",
+  "column_break_42",
+  "material_availability",
+  "financial_resources",
+  "capability_assessment_tab",
+  "technical_capability",
+  "management_capability",
+  "column_break_48",
+  "experience_with_similar_projects",
+  "subcontractor_availability",
+  "strategic_fit_section",
+  "alignment_with_company_strategy",
+  "alignment_with_growth_plans",
+  "column_break_53",
+  "brand_enhancement_potential",
+  "long_term_relationship_potential",
+  "decision_matrix_section",
+  "financial_score",
+  "technical_score",
+  "strategic_score",
+  "resource_score",
+  "risk_score",
+  "column_break_61",
+  "total_score",
+  "go_no_go_decision",
+  "decision_rationale",
+  "decision_date",
+  "decision_by",
+  "attachments_section",
+  "attachments"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_information_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "fieldname": "assessment_name",
+   "fieldtype": "Data",
+   "label": "Assessment Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nIn Progress\nCompleted\nApproved\nRejected",
+   "default": "Draft"
+  },
+  {
+   "fieldname": "lead_reference",
+   "fieldtype": "Link",
+   "label": "Lead Reference",
+   "options": "Construction Lead"
+  },
+  {
+   "fieldname": "lead_name",
+   "fieldtype": "Data",
+   "label": "Lead Name",
+   "fetch_from": "lead_reference.lead_name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "assessment_date",
+   "fieldtype": "Date",
+   "label": "Assessment Date",
+   "default": "Today"
+  },
+  {
+   "fieldname": "assessed_by",
+   "fieldtype": "Link",
+   "label": "Assessed By",
+   "options": "User"
+  },
+  {
+   "fieldname": "organization",
+   "fieldtype": "Data",
+   "label": "Organization",
+   "fetch_from": "lead_reference.organization_name"
+  },
+  {
+   "fieldname": "project_information_section",
+   "fieldtype": "Section Break",
+   "label": "Project Information"
+  },
+  {
+   "fieldname": "project_type",
+   "fieldtype": "Select",
+   "label": "Project Type",
+   "options": "Residential\nCommercial\nIndustrial\nInfrastructure\nInstitutional\nMixed Use\nOther",
+   "fetch_from": "lead_reference.project_type"
+  },
+  {
+   "fieldname": "project_description",
+   "fieldtype": "Text Editor",
+   "label": "Project Description"
+  },
+  {
+   "fieldname": "estimated_budget",
+   "fieldtype": "Currency",
+   "label": "Estimated Budget",
+   "fetch_from": "lead_reference.estimated_budget"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "fetch_from": "lead_reference.currency"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "expected_start_date",
+   "fieldtype": "Date",
+   "label": "Expected Start Date",
+   "fetch_from": "lead_reference.expected_start_date"
+  },
+  {
+   "fieldname": "expected_completion_date",
+   "fieldtype": "Date",
+   "label": "Expected Completion Date",
+   "fetch_from": "lead_reference.expected_completion_date"
+  },
+  {
+   "fieldname": "project_location",
+   "fieldtype": "Small Text",
+   "label": "Project Location"
+  },
+  {
+   "fieldname": "market_analysis_section",
+   "fieldtype": "Section Break",
+   "label": "Market Analysis"
+  },
+  {
+   "fieldname": "market_conditions",
+   "fieldtype": "Small Text",
+   "label": "Current Market Conditions"
+  },
+  {
+   "fieldname": "market_growth_potential",
+   "fieldtype": "Select",
+   "label": "Market Growth Potential",
+   "options": "High\nMedium\nLow"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "competitive_landscape",
+   "fieldtype": "Small Text",
+   "label": "Competitive Landscape"
+  },
+  {
+   "fieldname": "market_entry_barriers",
+   "fieldtype": "Small Text",
+   "label": "Market Entry Barriers"
+  },
+  {
+   "fieldname": "risk_reward_analysis_section",
+   "fieldtype": "Section Break",
+   "label": "Risk-Reward Analysis"
+  },
+  {
+   "fieldname": "risk_factors_tab",
+   "fieldtype": "Tab Break",
+   "label": "Risk Factors"
+  },
+  {
+   "fieldname": "financial_risks",
+   "fieldtype": "Small Text",
+   "label": "Financial Risks"
+  },
+  {
+   "fieldname": "technical_risks",
+   "fieldtype": "Small Text",
+   "label": "Technical Risks"
+  },
+  {
+   "fieldname": "regulatory_risks",
+   "fieldtype": "Small Text",
+   "label": "Regulatory Risks"
+  },
+  {
+   "fieldname": "market_risks",
+   "fieldtype": "Small Text",
+   "label": "Market Risks"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "overall_risk_rating",
+   "fieldtype": "Select",
+   "label": "Overall Risk Rating",
+   "options": "Very High\nHigh\nMedium\nLow\nVery Low"
+  },
+  {
+   "fieldname": "risk_mitigation_strategies",
+   "fieldtype": "Small Text",
+   "label": "Risk Mitigation Strategies"
+  },
+  {
+   "fieldname": "reward_factors_tab",
+   "fieldtype": "Tab Break",
+   "label": "Reward Factors"
+  },
+  {
+   "fieldname": "potential_profit_margin",
+   "fieldtype": "Percent",
+   "label": "Potential Profit Margin"
+  },
+  {
+   "fieldname": "strategic_value",
+   "fieldtype": "Small Text",
+   "label": "Strategic Value"
+  },
+  {
+   "fieldname": "future_opportunities",
+   "fieldtype": "Small Text",
+   "label": "Future Opportunities"
+  },
+  {
+   "fieldname": "column_break_35",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "overall_reward_rating",
+   "fieldtype": "Select",
+   "label": "Overall Reward Rating",
+   "options": "Very High\nHigh\nMedium\nLow\nVery Low"
+  },
+  {
+   "fieldname": "reward_enhancement_strategies",
+   "fieldtype": "Small Text",
+   "label": "Reward Enhancement Strategies"
+  },
+  {
+   "fieldname": "resource_assessment_section",
+   "fieldtype": "Section Break",
+   "label": "Resource Assessment"
+  },
+  {
+   "fieldname": "resource_availability_tab",
+   "fieldtype": "Tab Break",
+   "label": "Resource Availability"
+  },
+  {
+   "fieldname": "human_resources_availability",
+   "fieldtype": "Select",
+   "label": "Human Resources Availability",
+   "options": "Excellent\nGood\nAdequate\nLimited\nPoor"
+  },
+  {
+   "fieldname": "equipment_availability",
+   "fieldtype": "Select",
+   "label": "Equipment Availability",
+   "options": "Excellent\nGood\nAdequate\nLimited\nPoor"
+  },
+  {
+   "fieldname": "column_break_42",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "material_availability",
+   "fieldtype": "Select",
+   "label": "Material Availability",
+   "options": "Excellent\nGood\nAdequate\nLimited\nPoor"
+  },
+  {
+   "fieldname": "financial_resources",
+   "fieldtype": "Select",
+   "label": "Financial Resources",
+   "options": "Excellent\nGood\nAdequate\nLimited\nPoor"
+  },
+  {
+   "fieldname": "capability_assessment_tab",
+   "fieldtype": "Tab Break",
+   "label": "Capability Assessment"
+  },
+  {
+   "fieldname": "technical_capability",
+   "fieldtype": "Select",
+   "label": "Technical Capability",
+   "options": "Excellent\nGood\nAdequate\nLimited\nPoor"
+  },
+  {
+   "fieldname": "management_capability",
+   "fieldtype": "Select",
+   "label": "Management Capability",
+   "options": "Excellent\nGood\nAdequate\nLimited\nPoor"
+  },
+  {
+   "fieldname": "column_break_48",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "experience_with_similar_projects",
+   "fieldtype": "Select",
+   "label": "Experience with Similar Projects",
+   "options": "Extensive\nSignificant\nModerate\nLimited\nNone"
+  },
+  {
+   "fieldname": "subcontractor_availability",
+   "fieldtype": "Select",
+   "label": "Subcontractor Availability",
+   "options": "Excellent\nGood\nAdequate\nLimited\nPoor"
+  },
+  {
+   "fieldname": "strategic_fit_section",
+   "fieldtype": "Section Break",
+   "label": "Strategic Fit Analysis"
+  },
+  {
+   "fieldname": "alignment_with_company_strategy",
+   "fieldtype": "Select",
+   "label": "Alignment with Company Strategy",
+   "options": "Excellent\nGood\nModerate\nPoor\nNone"
+  },
+  {
+   "fieldname": "alignment_with_growth_plans",
+   "fieldtype": "Select",
+   "label": "Alignment with Growth Plans",
+   "options": "Excellent\nGood\nModerate\nPoor\nNone"
+  },
+  {
+   "fieldname": "column_break_53",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "brand_enhancement_potential",
+   "fieldtype": "Select",
+   "label": "Brand Enhancement Potential",
+   "options": "High\nMedium\nLow\nNone"
+  },
+  {
+   "fieldname": "long_term_relationship_potential",
+   "fieldtype": "Select",
+   "label": "Long-term Relationship Potential",
+   "options": "High\nMedium\nLow\nNone"
+  },
+  {
+   "fieldname": "decision_matrix_section",
+   "fieldtype": "Section Break",
+   "label": "Go/No-Go Decision Matrix"
+  },
+  {
+   "fieldname": "financial_score",
+   "fieldtype": "Int",
+   "label": "Financial Score (0-20)",
+   "description": "Score based on financial viability and profit potential"
+  },
+  {
+   "fieldname": "technical_score",
+   "fieldtype": "Int",
+   "label": "Technical Score (0-20)",
+   "description": "Score based on technical feasibility and capability"
+  },
+  {
+   "fieldname": "strategic_score",
+   "fieldtype": "Int",
+   "label": "Strategic Score (0-20)",
+   "description": "Score based on strategic alignment and future potential"
+  },
+  {
+   "fieldname": "resource_score",
+   "fieldtype": "Int",
+   "label": "Resource Score (0-20)",
+   "description": "Score based on resource availability and capability"
+  },
+  {
+   "fieldname": "risk_score",
+   "fieldtype": "Int",
+   "label": "Risk Score (0-20)",
+   "description": "Score based on risk assessment (higher is better/lower risk)"
+  },
+  {
+   "fieldname": "column_break_61",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_score",
+   "fieldtype": "Int",
+   "label": "Total Score (0-100)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "go_no_go_decision",
+   "fieldtype": "Select",
+   "label": "Go/No-Go Decision",
+   "options": "Go\nNo-Go\nConditional Go\nDefer Decision"
+  },
+  {
+   "fieldname": "decision_rationale",
+   "fieldtype": "Text Editor",
+   "label": "Decision Rationale"
+  },
+  {
+   "fieldname": "decision_date",
+   "fieldtype": "Date",
+   "label": "Decision Date"
+  },
+  {
+   "fieldname": "decision_by",
+   "fieldtype": "Link",
+   "label": "Decision By",
+   "options": "User"
+  },
+  {
+   "fieldname": "attachments_section",
+   "fieldtype": "Section Break",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Table",
+   "label": "Attachments",
+   "options": "File"
+  }
+ ],
+ "links": [],
+ "modified": "2023-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Pre Construction",
+ "name": "Opportunity Assessment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Construction Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Construction User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

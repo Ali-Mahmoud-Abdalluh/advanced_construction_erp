@@ -1,0 +1,255 @@
+{
+  "autoname": "naming_series:",
+  "creation": "2023-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "title",
+    "status",
+    "construction_project",
+    "project",
+    "column_break_5",
+    "transaction_date",
+    "required_by_date",
+    "priority",
+    "requested_by",
+    "request_details_section",
+    "purpose",
+    "description",
+    "items_section",
+    "items",
+    "total_estimated_cost",
+    "approval_section",
+    "approval_status",
+    "approved_by",
+    "approval_date",
+    "column_break_19",
+    "rejection_reason",
+    "amended_from"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Select",
+      "label": "Series",
+      "options": "CMR-.YYYY.-",
+      "reqd": 1,
+      "default": "CMR-.YYYY.-"
+    },
+    {
+      "fieldname": "title",
+      "fieldtype": "Data",
+      "label": "Title",
+      "reqd": 1
+    },
+    {
+      "default": "Draft",
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Status",
+      "options": "Draft\nSubmitted\nApproved\nRejected\nOrdered\nReceived\nCancelled",
+      "reqd": 1
+    },
+    {
+      "fieldname": "construction_project",
+      "fieldtype": "Link",
+      "label": "Construction Project",
+      "options": "Construction Project"
+    },
+    {
+      "fieldname": "project",
+      "fieldtype": "Link",
+      "label": "Project",
+      "options": "Project"
+    },
+    {
+      "fieldname": "column_break_5",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "Today",
+      "fieldname": "transaction_date",
+      "fieldtype": "Date",
+      "in_list_view": 1,
+      "label": "Transaction Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "required_by_date",
+      "fieldtype": "Date",
+      "in_list_view": 1,
+      "label": "Required By",
+      "reqd": 1
+    },
+    {
+      "default": "Medium",
+      "fieldname": "priority",
+      "fieldtype": "Select",
+      "label": "Priority",
+      "options": "Low\nMedium\nHigh\nUrgent",
+      "reqd": 1
+    },
+    {
+      "fieldname": "requested_by",
+      "fieldtype": "Link",
+      "label": "Requested By",
+      "options": "User",
+      "reqd": 1
+    },
+    {
+      "fieldname": "request_details_section",
+      "fieldtype": "Section Break",
+      "label": "Request Details"
+    },
+    {
+      "fieldname": "purpose",
+      "fieldtype": "Select",
+      "label": "Purpose",
+      "options": "Construction\nMaintenance\nRepair\nReplacement\nNew Project\nOther",
+      "reqd": 1
+    },
+    {
+      "fieldname": "description",
+      "fieldtype": "Text Editor",
+      "label": "Description"
+    },
+    {
+      "fieldname": "items_section",
+      "fieldtype": "Section Break",
+      "label": "Items"
+    },
+    {
+      "fieldname": "items",
+      "fieldtype": "Table",
+      "label": "Items",
+      "options": "Construction Material Request Item",
+      "reqd": 1
+    },
+    {
+      "fieldname": "total_estimated_cost",
+      "fieldtype": "Currency",
+      "label": "Total Estimated Cost",
+      "read_only": 1
+    },
+    {
+      "fieldname": "approval_section",
+      "fieldtype": "Section Break",
+      "label": "Approval"
+    },
+    {
+      "default": "Pending",
+      "fieldname": "approval_status",
+      "fieldtype": "Select",
+      "label": "Approval Status",
+      "options": "Pending\nApproved\nRejected",
+      "read_only": 1
+    },
+    {
+      "fieldname": "approved_by",
+      "fieldtype": "Link",
+      "label": "Approved By",
+      "options": "User",
+      "read_only": 1
+    },
+    {
+      "fieldname": "approval_date",
+      "fieldtype": "Date",
+      "label": "Approval Date",
+      "read_only": 1
+    },
+    {
+      "fieldname": "column_break_19",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "rejection_reason",
+      "fieldtype": "Small Text",
+      "label": "Rejection Reason",
+      "read_only": 1
+    },
+    {
+      "fieldname": "amended_from",
+      "fieldtype": "Link",
+      "label": "Amended From",
+      "no_copy": 1,
+      "options": "Construction Material Request",
+      "print_hide": 1,
+      "read_only": 1
+    }
+  ],
+  "is_submittable": 1,
+  "modified": "2023-01-01 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Material Management",
+  "name": "Construction Material Request",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "amend": 1,
+      "cancel": 1,
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    },
+    {
+      "amend": 1,
+      "cancel": 1,
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Construction Manager",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    },
+    {
+      "amend": 0,
+      "cancel": 0,
+      "create": 1,
+      "delete": 0,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Construction User",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    },
+    {
+      "amend": 0,
+      "cancel": 0,
+      "create": 1,
+      "delete": 0,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Site Supervisor",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "title_field": "title",
+  "track_changes": 1
+}

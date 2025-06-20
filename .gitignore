@@ -1,0 +1,22 @@
+.DS_Store
+*.pyc
+*.egg-info
+*.swp
+tags
+advanced_construction_erp/public/dist
+advanced_construction_erp/public/node_modules
+advanced_construction_erp/docs/current
+node_modules/
+dist/
+__pycache__/
+
+# build/
+.vscode
+.vs
+node_modules
+*debug.log
+advanced_construction_erp/docs/current
+advanced_construction_erp/public/frontend
+advanced_construction_erp/www/advanced_construction_erp.html
+advanced_construction_erp/public/roster
+advanced_construction_erp/www/roster.html

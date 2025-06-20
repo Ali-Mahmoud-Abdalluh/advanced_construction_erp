@@ -1,0 +1,182 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "autoname": "field:checklist_name",
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "checklist_details_section",
+        "checklist_name",
+        "checklist_type",
+        "description",
+        "is_template",
+        "applicable_to",
+        "version",
+        "effective_date",
+        "expiry_date",
+        "checklist_items_section",
+        "items",
+        "approval_section",
+        "created_by",
+        "creation_date",
+        "approved_by",
+        "approval_date",
+        "status"
+    ],
+    "fields": [
+        {
+            "fieldname": "checklist_details_section",
+            "fieldtype": "Section Break",
+            "label": "Checklist Details"
+        },
+        {
+            "fieldname": "checklist_name",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Checklist Name",
+            "reqd": 1,
+            "unique": 1
+        },
+        {
+            "fieldname": "checklist_type",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Checklist Type",
+            "options": "Material\nWorkmanship\nEquipment\nSafety\nEnvironmental\nRegulatory\nOther",
+            "reqd": 1
+        },
+        {
+            "fieldname": "description",
+            "fieldtype": "Text Editor",
+            "label": "Description"
+        },
+        {
+            "default": "0",
+            "fieldname": "is_template",
+            "fieldtype": "Check",
+            "label": "Is Template"
+        },
+        {
+            "fieldname": "applicable_to",
+            "fieldtype": "Select",
+            "label": "Applicable To",
+            "options": "\nAll Projects\nSpecific Project Type\nSpecific Item Group\nSpecific Work Type"
+        },
+        {
+            "fieldname": "version",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Version",
+            "reqd": 1
+        },
+        {
+            "fieldname": "effective_date",
+            "fieldtype": "Date",
+            "label": "Effective Date",
+            "reqd": 1
+        },
+        {
+            "fieldname": "expiry_date",
+            "fieldtype": "Date",
+            "label": "Expiry Date"
+        },
+        {
+            "fieldname": "checklist_items_section",
+            "fieldtype": "Section Break",
+            "label": "Checklist Items"
+        },
+        {
+            "fieldname": "items",
+            "fieldtype": "Table",
+            "label": "Items",
+            "options": "Quality Checklist Item",
+            "reqd": 1
+        },
+        {
+            "fieldname": "approval_section",
+            "fieldtype": "Section Break",
+            "label": "Approval"
+        },
+        {
+            "fieldname": "created_by",
+            "fieldtype": "Link",
+            "label": "Created By",
+            "options": "User",
+            "reqd": 1
+        },
+        {
+            "fieldname": "creation_date",
+            "fieldtype": "Date",
+            "label": "Creation Date",
+            "reqd": 1
+        },
+        {
+            "fieldname": "approved_by",
+            "fieldtype": "Link",
+            "label": "Approved By",
+            "options": "User"
+        },
+        {
+            "fieldname": "approval_date",
+            "fieldtype": "Date",
+            "label": "Approval Date"
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Status",
+            "options": "Draft\nActive\nObsolete",
+            "reqd": 1
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2024-01-01 00:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Quality Management",
+    "name": "Quality Checklist",
+    "naming_rule": "By fieldname",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Quality Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 0,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Quality User",
+            "share": 1,
+            "write": 0
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": []
+} 

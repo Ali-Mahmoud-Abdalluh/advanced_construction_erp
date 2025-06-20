@@ -1,0 +1,317 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "analysis_title",
+  "work_item",
+  "unit",
+  "column_break_5",
+  "analysis_date",
+  "status",
+  "prepared_by",
+  "approved_by",
+  "section_break_10",
+  "work_description",
+  "specifications",
+  "section_break_13",
+  "material_components",
+  "section_break_15",
+  "labor_components",
+  "section_break_17",
+  "equipment_components",
+  "section_break_19",
+  "material_total",
+  "labor_total",
+  "equipment_total",
+  "column_break_23",
+  "waste_factor_percentage",
+  "waste_amount",
+  "subtotal",
+  "column_break_27",
+  "overhead_percentage",
+  "overhead_amount",
+  "profit_percentage",
+  "profit_amount",
+  "section_break_32",
+  "total_rate_per_unit",
+  "productivity_factor",
+  "final_rate",
+  "section_break_36",
+  "assumptions",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "RA-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "analysis_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Analysis Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "work_item",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Work Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Unit",
+   "options": "UOM",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "analysis_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Analysis Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nUnder Review\nApproved\nObsolete",
+   "reqd": 1
+  },
+  {
+   "fieldname": "prepared_by",
+   "fieldtype": "Link",
+   "label": "Prepared By",
+   "options": "User"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break",
+   "label": "Work Details"
+  },
+  {
+   "fieldname": "work_description",
+   "fieldtype": "Text Editor",
+   "label": "Work Description"
+  },
+  {
+   "fieldname": "specifications",
+   "fieldtype": "Text Editor",
+   "label": "Specifications"
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break",
+   "label": "Material Components"
+  },
+  {
+   "fieldname": "material_components",
+   "fieldtype": "Table",
+   "label": "Material Components",
+   "options": "Rate Analysis Material"
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break",
+   "label": "Labor Components"
+  },
+  {
+   "fieldname": "labor_components",
+   "fieldtype": "Table",
+   "label": "Labor Components",
+   "options": "Rate Analysis Labor"
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break",
+   "label": "Equipment Components"
+  },
+  {
+   "fieldname": "equipment_components",
+   "fieldtype": "Table",
+   "label": "Equipment Components",
+   "options": "Rate Analysis Equipment"
+  },
+  {
+   "fieldname": "section_break_19",
+   "fieldtype": "Section Break",
+   "label": "Rate Calculation"
+  },
+  {
+   "fieldname": "material_total",
+   "fieldtype": "Currency",
+   "label": "Material Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "labor_total",
+   "fieldtype": "Currency",
+   "label": "Labor Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "equipment_total",
+   "fieldtype": "Currency",
+   "label": "Equipment Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "waste_factor_percentage",
+   "fieldtype": "Percent",
+   "label": "Waste Factor %"
+  },
+  {
+   "fieldname": "waste_amount",
+   "fieldtype": "Currency",
+   "label": "Waste Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "subtotal",
+   "fieldtype": "Currency",
+   "label": "Subtotal",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "overhead_percentage",
+   "fieldtype": "Percent",
+   "label": "Overhead %"
+  },
+  {
+   "fieldname": "overhead_amount",
+   "fieldtype": "Currency",
+   "label": "Overhead Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "profit_percentage",
+   "fieldtype": "Percent",
+   "label": "Profit %"
+  },
+  {
+   "fieldname": "profit_amount",
+   "fieldtype": "Currency",
+   "label": "Profit Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_32",
+   "fieldtype": "Section Break",
+   "label": "Final Rate"
+  },
+  {
+   "fieldname": "total_rate_per_unit",
+   "fieldtype": "Currency",
+   "label": "Total Rate per Unit",
+   "read_only": 1
+  },
+  {
+   "fieldname": "productivity_factor",
+   "fieldtype": "Float",
+   "label": "Productivity Factor",
+   "precision": "3"
+  },
+  {
+   "fieldname": "final_rate",
+   "fieldtype": "Currency",
+   "label": "Final Rate",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_36",
+   "fieldtype": "Section Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "assumptions",
+   "fieldtype": "Text Editor",
+   "label": "Assumptions"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Construction Estimation",
+ "name": "Comprehensive Rate Analysis",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Construction Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Estimation Engineer",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

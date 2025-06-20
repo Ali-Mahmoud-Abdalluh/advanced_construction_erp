@@ -1,0 +1,66 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "issue_description",
+        "specification",
+        "expected_value",
+        "actual_value",
+        "is_critical",
+        "remarks"
+    ],
+    "fields": [
+        {
+            "fieldname": "issue_description",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Issue Description",
+            "reqd": 1
+        },
+        {
+            "fieldname": "specification",
+            "fieldtype": "Text",
+            "in_list_view": 1,
+            "label": "Specification"
+        },
+        {
+            "fieldname": "expected_value",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Expected Value"
+        },
+        {
+            "fieldname": "actual_value",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Actual Value"
+        },
+        {
+            "default": "0",
+            "fieldname": "is_critical",
+            "fieldtype": "Check",
+            "in_list_view": 1,
+            "label": "Is Critical"
+        },
+        {
+            "fieldname": "remarks",
+            "fieldtype": "Text",
+            "label": "Remarks"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "istable": 1,
+    "links": [],
+    "modified": "2024-01-01 00:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Quality Management",
+    "name": "Non Conformance Issue",
+    "owner": "Administrator",
+    "permissions": [],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": []
+} 

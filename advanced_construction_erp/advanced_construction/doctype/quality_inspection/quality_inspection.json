@@ -1,0 +1,258 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "autoname": "format:QI-{YYYY}-{#####}",
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "inspection_details_section",
+        "inspection_type",
+        "project",
+        "inspection_date",
+        "location",
+        "status",
+        "reference_section",
+        "reference_type",
+        "reference_name",
+        "item_code",
+        "item_name",
+        "item_group",
+        "inspection_criteria_section",
+        "quality_checklist",
+        "checklist_items",
+        "results_section",
+        "total_checks",
+        "passed_checks",
+        "failed_checks",
+        "quality_score",
+        "remarks",
+        "inspection_team_section",
+        "inspector",
+        "inspector_name",
+        "supervisor",
+        "supervisor_name",
+        "attachments_section",
+        "attachments"
+    ],
+    "fields": [
+        {
+            "fieldname": "inspection_details_section",
+            "fieldtype": "Section Break",
+            "label": "Inspection Details"
+        },
+        {
+            "fieldname": "inspection_type",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Inspection Type",
+            "options": "Material\nWorkmanship\nEquipment\nSafety\nEnvironmental\nRegulatory\nOther",
+            "reqd": 1
+        },
+        {
+            "fieldname": "project",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Project",
+            "options": "Construction Project",
+            "reqd": 1
+        },
+        {
+            "fieldname": "inspection_date",
+            "fieldtype": "Datetime",
+            "in_list_view": 1,
+            "label": "Inspection Date",
+            "reqd": 1
+        },
+        {
+            "fieldname": "location",
+            "fieldtype": "Data",
+            "label": "Location",
+            "reqd": 1
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Status",
+            "options": "Draft\nInspection Scheduled\nInspection Completed\nApproved\nRejected\nCancelled",
+            "reqd": 1
+        },
+        {
+            "fieldname": "reference_section",
+            "fieldtype": "Section Break",
+            "label": "Reference"
+        },
+        {
+            "fieldname": "reference_type",
+            "fieldtype": "Select",
+            "label": "Reference Type",
+            "options": "\nPurchase Receipt\nDelivery Note\nStock Entry\nTask\nWork Order\nOther"
+        },
+        {
+            "fieldname": "reference_name",
+            "fieldtype": "Dynamic Link",
+            "label": "Reference Name",
+            "options": "reference_type"
+        },
+        {
+            "fieldname": "item_code",
+            "fieldtype": "Link",
+            "label": "Item Code",
+            "options": "Item"
+        },
+        {
+            "fieldname": "item_name",
+            "fieldtype": "Data",
+            "label": "Item Name",
+            "read_only": 1
+        },
+        {
+            "fieldname": "item_group",
+            "fieldtype": "Link",
+            "label": "Item Group",
+            "options": "Item Group",
+            "read_only": 1
+        },
+        {
+            "fieldname": "inspection_criteria_section",
+            "fieldtype": "Section Break",
+            "label": "Inspection Criteria"
+        },
+        {
+            "fieldname": "quality_checklist",
+            "fieldtype": "Link",
+            "label": "Quality Checklist",
+            "options": "Quality Checklist"
+        },
+        {
+            "fieldname": "checklist_items",
+            "fieldtype": "Table",
+            "label": "Checklist Items",
+            "options": "Quality Inspection Item"
+        },
+        {
+            "fieldname": "results_section",
+            "fieldtype": "Section Break",
+            "label": "Results"
+        },
+        {
+            "fieldname": "total_checks",
+            "fieldtype": "Int",
+            "label": "Total Checks",
+            "read_only": 1
+        },
+        {
+            "fieldname": "passed_checks",
+            "fieldtype": "Int",
+            "label": "Passed Checks",
+            "read_only": 1
+        },
+        {
+            "fieldname": "failed_checks",
+            "fieldtype": "Int",
+            "label": "Failed Checks",
+            "read_only": 1
+        },
+        {
+            "fieldname": "quality_score",
+            "fieldtype": "Percent",
+            "label": "Quality Score",
+            "read_only": 1
+        },
+        {
+            "fieldname": "remarks",
+            "fieldtype": "Text Editor",
+            "label": "Remarks"
+        },
+        {
+            "fieldname": "inspection_team_section",
+            "fieldtype": "Section Break",
+            "label": "Inspection Team"
+        },
+        {
+            "fieldname": "inspector",
+            "fieldtype": "Link",
+            "label": "Inspector",
+            "options": "User",
+            "reqd": 1
+        },
+        {
+            "fieldname": "inspector_name",
+            "fieldtype": "Data",
+            "label": "Inspector Name",
+            "read_only": 1
+        },
+        {
+            "fieldname": "supervisor",
+            "fieldtype": "Link",
+            "label": "Supervisor",
+            "options": "User"
+        },
+        {
+            "fieldname": "supervisor_name",
+            "fieldtype": "Data",
+            "label": "Supervisor Name",
+            "read_only": 1
+        },
+        {
+            "fieldname": "attachments_section",
+            "fieldtype": "Section Break",
+            "label": "Attachments"
+        },
+        {
+            "fieldname": "attachments",
+            "fieldtype": "Table",
+            "label": "Attachments",
+            "options": "Quality Inspection Attachment"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2024-01-01 00:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Quality Management",
+    "name": "Quality Inspection",
+    "naming_rule": "Expression",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Quality Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Quality User",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": []
+} 

@@ -1,0 +1,70 @@
+{
+  "autoname": "hash",
+  "creation": "2023-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "image",
+    "image_type",
+    "column_break_3",
+    "caption",
+    "date",
+    "section_break_6",
+    "description"
+  ],
+  "fields": [
+    {
+      "fieldname": "image",
+      "fieldtype": "Attach Image",
+      "in_list_view": 1,
+      "label": "Image",
+      "reqd": 1
+    },
+    {
+      "fieldname": "image_type",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Image Type",
+      "options": "Site Overview\nAerial View\nProgress Photo\nSafety Inspection\nQuality Control\nMaterial Storage\nEquipment\nFacility\nOther",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_3",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "caption",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Caption"
+    },
+    {
+      "default": "Today",
+      "fieldname": "date",
+      "fieldtype": "Date",
+      "in_list_view": 1,
+      "label": "Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "section_break_6",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "description",
+      "fieldtype": "Small Text",
+      "label": "Description"
+    }
+  ],
+  "istable": 1,
+  "modified": "2023-01-01 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Site Management",
+  "name": "Construction Site Image",
+  "owner": "Administrator",
+  "permissions": [],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

@@ -1,0 +1,189 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "project",
+        "project_type",
+        "project_size",
+        "location",
+        "estimate_date",
+        "status",
+        "estimate_details",
+        "estimate_items",
+        "total_base_cost",
+        "contingency_percentage",
+        "contingency_amount",
+        "total_estimated_cost",
+        "escalation_percentage",
+        "submitted_by",
+        "submitted_on",
+        "cancelled_by",
+        "cancelled_on"
+    ],
+    "fields": [
+        {
+            "fieldname": "project",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Project",
+            "options": "Construction Project",
+            "reqd": 1
+        },
+        {
+            "fieldname": "project_type",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Project Type",
+            "options": "Building\nInfrastructure\nIndustrial\nResidential\nCommercial",
+            "reqd": 1
+        },
+        {
+            "fieldname": "project_size",
+            "fieldtype": "Float",
+            "in_list_view": 1,
+            "label": "Project Size",
+            "reqd": 1
+        },
+        {
+            "fieldname": "location",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Location",
+            "reqd": 1
+        },
+        {
+            "fieldname": "estimate_date",
+            "fieldtype": "Date",
+            "in_list_view": 1,
+            "label": "Estimate Date",
+            "reqd": 1
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Status",
+            "options": "Draft\nSubmitted\nApproved\nRejected\nCancelled",
+            "reqd": 1
+        },
+        {
+            "fieldname": "estimate_details",
+            "fieldtype": "Section Break",
+            "label": "Estimate Details"
+        },
+        {
+            "fieldname": "estimate_items",
+            "fieldtype": "Table",
+            "label": "Estimate Items",
+            "options": "Conceptual Estimate Item",
+            "reqd": 1
+        },
+        {
+            "fieldname": "total_base_cost",
+            "fieldtype": "Currency",
+            "in_list_view": 1,
+            "label": "Total Base Cost",
+            "read_only": 1
+        },
+        {
+            "fieldname": "contingency_percentage",
+            "fieldtype": "Percent",
+            "in_list_view": 1,
+            "label": "Contingency Percentage",
+            "reqd": 1
+        },
+        {
+            "fieldname": "contingency_amount",
+            "fieldtype": "Currency",
+            "in_list_view": 1,
+            "label": "Contingency Amount",
+            "read_only": 1
+        },
+        {
+            "fieldname": "total_estimated_cost",
+            "fieldtype": "Currency",
+            "in_list_view": 1,
+            "label": "Total Estimated Cost",
+            "read_only": 1
+        },
+        {
+            "fieldname": "escalation_percentage",
+            "fieldtype": "Percent",
+            "label": "Escalation Percentage"
+        },
+        {
+            "fieldname": "submitted_by",
+            "fieldtype": "Data",
+            "label": "Submitted By",
+            "read_only": 1
+        },
+        {
+            "fieldname": "submitted_on",
+            "fieldtype": "Date",
+            "label": "Submitted On",
+            "read_only": 1
+        },
+        {
+            "fieldname": "cancelled_by",
+            "fieldtype": "Data",
+            "label": "Cancelled By",
+            "read_only": 1
+        },
+        {
+            "fieldname": "cancelled_on",
+            "fieldtype": "Date",
+            "label": "Cancelled On",
+            "read_only": 1
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2024-01-01 00:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Construction Project",
+    "name": "Conceptual Estimate",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Construction Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Construction User",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": []
+} 

@@ -1,0 +1,634 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:estimation_name",
+ "creation": "2023-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_information_section",
+  "estimation_name",
+  "status",
+  "estimation_type",
+  "feasibility_study",
+  "lead_reference",
+  "lead_name",
+  "column_break_7",
+  "estimation_date",
+  "prepared_by",
+  "organization",
+  "project_information_section",
+  "project_type",
+  "project_description",
+  "estimated_budget",
+  "currency",
+  "column_break_16",
+  "expected_start_date",
+  "expected_completion_date",
+  "project_location",
+  "estimation_details_section",
+  "estimation_method",
+  "estimation_basis",
+  "estimation_accuracy",
+  "column_break_23",
+  "reference_projects",
+  "estimation_assumptions",
+  "cost_breakdown_section",
+  "direct_costs_tab",
+  "material_costs",
+  "labor_costs",
+  "equipment_costs",
+  "subcontractor_costs",
+  "column_break_31",
+  "total_direct_costs",
+  "direct_cost_notes",
+  "indirect_costs_tab",
+  "project_management_costs",
+  "engineering_design_costs",
+  "permit_fees",
+  "insurance_costs",
+  "column_break_38",
+  "temporary_facilities_costs",
+  "general_conditions",
+  "total_indirect_costs",
+  "indirect_cost_notes",
+  "other_costs_tab",
+  "contingency_percentage",
+  "contingency_amount",
+  "escalation_percentage",
+  "escalation_amount",
+  "column_break_46",
+  "overhead_percentage",
+  "overhead_amount",
+  "profit_percentage",
+  "profit_amount",
+  "total_other_costs",
+  "summary_tab",
+  "total_base_cost",
+  "total_project_cost",
+  "cost_per_square_foot",
+  "cost_per_square_meter",
+  "column_break_55",
+  "cost_variance_from_budget",
+  "cost_variance_percentage",
+  "cost_notes",
+  "detailed_estimation_section",
+  "work_breakdown_structure",
+  "bill_of_quantities_section",
+  "bill_of_quantities",
+  "pricing_strategy_section",
+  "pricing_strategy",
+  "markup_strategy",
+  "column_break_63",
+  "value_engineering_opportunities",
+  "competitive_factors",
+  "risk_assessment_section",
+  "risk_factors",
+  "risk_contingency_percentage",
+  "column_break_68",
+  "risk_contingency_amount",
+  "risk_notes",
+  "approval_section",
+  "approval_status",
+  "approved_by",
+  "approval_date",
+  "column_break_74",
+  "approval_comments",
+  "attachments_section",
+  "attachments"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_information_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "fieldname": "estimation_name",
+   "fieldtype": "Data",
+   "label": "Estimation Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nIn Progress\nCompleted\nApproved\nRejected\nRevised",
+   "default": "Draft"
+  },
+  {
+   "fieldname": "estimation_type",
+   "fieldtype": "Select",
+   "label": "Estimation Type",
+   "options": "Conceptual\nPreliminary\nDetailed\nBid\nChange Order",
+   "default": "Conceptual"
+  },
+  {
+   "fieldname": "feasibility_study",
+   "fieldtype": "Link",
+   "label": "Feasibility Study",
+   "options": "Feasibility Study"
+  },
+  {
+   "fieldname": "lead_reference",
+   "fieldtype": "Link",
+   "label": "Lead Reference",
+   "options": "Construction Lead"
+  },
+  {
+   "fieldname": "lead_name",
+   "fieldtype": "Data",
+   "label": "Lead Name",
+   "fetch_from": "lead_reference.lead_name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "estimation_date",
+   "fieldtype": "Date",
+   "label": "Estimation Date",
+   "default": "Today"
+  },
+  {
+   "fieldname": "prepared_by",
+   "fieldtype": "Link",
+   "label": "Prepared By",
+   "options": "User"
+  },
+  {
+   "fieldname": "organization",
+   "fieldtype": "Data",
+   "label": "Organization",
+   "fetch_from": "lead_reference.organization_name"
+  },
+  {
+   "fieldname": "project_information_section",
+   "fieldtype": "Section Break",
+   "label": "Project Information"
+  },
+  {
+   "fieldname": "project_type",
+   "fieldtype": "Select",
+   "label": "Project Type",
+   "options": "Residential\nCommercial\nIndustrial\nInfrastructure\nInstitutional\nMixed Use\nOther"
+  },
+  {
+   "fieldname": "project_description",
+   "fieldtype": "Text Editor",
+   "label": "Project Description"
+  },
+  {
+   "fieldname": "estimated_budget",
+   "fieldtype": "Currency",
+   "label": "Estimated Budget"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "expected_start_date",
+   "fieldtype": "Date",
+   "label": "Expected Start Date"
+  },
+  {
+   "fieldname": "expected_completion_date",
+   "fieldtype": "Date",
+   "label": "Expected Completion Date"
+  },
+  {
+   "fieldname": "project_location",
+   "fieldtype": "Small Text",
+   "label": "Project Location"
+  },
+  {
+   "fieldname": "estimation_details_section",
+   "fieldtype": "Section Break",
+   "label": "Estimation Details"
+  },
+  {
+   "fieldname": "estimation_method",
+   "fieldtype": "Select",
+   "label": "Estimation Method",
+   "options": "Analogous\nParametric\nBottom-up\nThree-point\nExpert Judgment\nHistorical Data",
+   "default": "Analogous"
+  },
+  {
+   "fieldname": "estimation_basis",
+   "fieldtype": "Small Text",
+   "label": "Estimation Basis",
+   "description": "Describe the basis for this estimation (e.g., drawings, specifications, site visits)"
+  },
+  {
+   "fieldname": "estimation_accuracy",
+   "fieldtype": "Select",
+   "label": "Estimation Accuracy",
+   "options": "Order of Magnitude (-25% to +75%)\nConceptual (-15% to +50%)\nPreliminary (-10% to +25%)\nDefinitive (-5% to +10%)\nDetailed (-3% to +5%)",
+   "default": "Conceptual (-15% to +50%)"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reference_projects",
+   "fieldtype": "Small Text",
+   "label": "Reference Projects",
+   "description": "List similar projects used as reference for this estimation"
+  },
+  {
+   "fieldname": "estimation_assumptions",
+   "fieldtype": "Small Text",
+   "label": "Estimation Assumptions",
+   "description": "List key assumptions made for this estimation"
+  },
+  {
+   "fieldname": "cost_breakdown_section",
+   "fieldtype": "Section Break",
+   "label": "Cost Breakdown"
+  },
+  {
+   "fieldname": "direct_costs_tab",
+   "fieldtype": "Tab Break",
+   "label": "Direct Costs"
+  },
+  {
+   "fieldname": "material_costs",
+   "fieldtype": "Currency",
+   "label": "Material Costs"
+  },
+  {
+   "fieldname": "labor_costs",
+   "fieldtype": "Currency",
+   "label": "Labor Costs"
+  },
+  {
+   "fieldname": "equipment_costs",
+   "fieldtype": "Currency",
+   "label": "Equipment Costs"
+  },
+  {
+   "fieldname": "subcontractor_costs",
+   "fieldtype": "Currency",
+   "label": "Subcontractor Costs"
+  },
+  {
+   "fieldname": "column_break_31",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_direct_costs",
+   "fieldtype": "Currency",
+   "label": "Total Direct Costs",
+   "read_only": 1
+  },
+  {
+   "fieldname": "direct_cost_notes",
+   "fieldtype": "Small Text",
+   "label": "Direct Cost Notes"
+  },
+  {
+   "fieldname": "indirect_costs_tab",
+   "fieldtype": "Tab Break",
+   "label": "Indirect Costs"
+  },
+  {
+   "fieldname": "project_management_costs",
+   "fieldtype": "Currency",
+   "label": "Project Management Costs"
+  },
+  {
+   "fieldname": "engineering_design_costs",
+   "fieldtype": "Currency",
+   "label": "Engineering & Design Costs"
+  },
+  {
+   "fieldname": "permit_fees",
+   "fieldtype": "Currency",
+   "label": "Permit Fees"
+  },
+  {
+   "fieldname": "insurance_costs",
+   "fieldtype": "Currency",
+   "label": "Insurance Costs"
+  },
+  {
+   "fieldname": "column_break_38",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "temporary_facilities_costs",
+   "fieldtype": "Currency",
+   "label": "Temporary Facilities Costs"
+  },
+  {
+   "fieldname": "general_conditions",
+   "fieldtype": "Currency",
+   "label": "General Conditions"
+  },
+  {
+   "fieldname": "total_indirect_costs",
+   "fieldtype": "Currency",
+   "label": "Total Indirect Costs",
+   "read_only": 1
+  },
+  {
+   "fieldname": "indirect_cost_notes",
+   "fieldtype": "Small Text",
+   "label": "Indirect Cost Notes"
+  },
+  {
+   "fieldname": "other_costs_tab",
+   "fieldtype": "Tab Break",
+   "label": "Other Costs & Markups"
+  },
+  {
+   "fieldname": "contingency_percentage",
+   "fieldtype": "Percent",
+   "label": "Contingency Percentage"
+  },
+  {
+   "fieldname": "contingency_amount",
+   "fieldtype": "Currency",
+   "label": "Contingency Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "escalation_percentage",
+   "fieldtype": "Percent",
+   "label": "Escalation Percentage"
+  },
+  {
+   "fieldname": "escalation_amount",
+   "fieldtype": "Currency",
+   "label": "Escalation Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_46",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "overhead_percentage",
+   "fieldtype": "Percent",
+   "label": "Overhead Percentage"
+  },
+  {
+   "fieldname": "overhead_amount",
+   "fieldtype": "Currency",
+   "label": "Overhead Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "profit_percentage",
+   "fieldtype": "Percent",
+   "label": "Profit Percentage"
+  },
+  {
+   "fieldname": "profit_amount",
+   "fieldtype": "Currency",
+   "label": "Profit Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_other_costs",
+   "fieldtype": "Currency",
+   "label": "Total Other Costs & Markups",
+   "read_only": 1
+  },
+  {
+   "fieldname": "summary_tab",
+   "fieldtype": "Tab Break",
+   "label": "Cost Summary"
+  },
+  {
+   "fieldname": "total_base_cost",
+   "fieldtype": "Currency",
+   "label": "Total Base Cost",
+   "description": "Direct + Indirect Costs",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_project_cost",
+   "fieldtype": "Currency",
+   "label": "Total Project Cost",
+   "description": "Base Cost + Other Costs & Markups",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cost_per_square_foot",
+   "fieldtype": "Currency",
+   "label": "Cost per Square Foot"
+  },
+  {
+   "fieldname": "cost_per_square_meter",
+   "fieldtype": "Currency",
+   "label": "Cost per Square Meter"
+  },
+  {
+   "fieldname": "column_break_55",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cost_variance_from_budget",
+   "fieldtype": "Currency",
+   "label": "Cost Variance from Budget",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cost_variance_percentage",
+   "fieldtype": "Percent",
+   "label": "Cost Variance Percentage",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cost_notes",
+   "fieldtype": "Small Text",
+   "label": "Cost Notes"
+  },
+  {
+   "fieldname": "detailed_estimation_section",
+   "fieldtype": "Section Break",
+   "label": "Detailed Estimation"
+  },
+  {
+   "fieldname": "work_breakdown_structure",
+   "fieldtype": "Table",
+   "label": "Work Breakdown Structure",
+   "options": "Work Breakdown Item"
+  },
+  {
+   "fieldname": "bill_of_quantities_section",
+   "fieldtype": "Section Break",
+   "label": "Bill of Quantities"
+  },
+  {
+   "fieldname": "bill_of_quantities",
+   "fieldtype": "Table",
+   "label": "Bill of Quantities",
+   "options": "Bill of Quantity Item"
+  },
+  {
+   "fieldname": "pricing_strategy_section",
+   "fieldtype": "Section Break",
+   "label": "Pricing Strategy"
+  },
+  {
+   "fieldname": "pricing_strategy",
+   "fieldtype": "Select",
+   "label": "Pricing Strategy",
+   "options": "Cost Plus\nFixed Price\nTime & Materials\nUnit Price\nGuaranteed Maximum Price\nTarget Price",
+   "default": "Cost Plus"
+  },
+  {
+   "fieldname": "markup_strategy",
+   "fieldtype": "Small Text",
+   "label": "Markup Strategy"
+  },
+  {
+   "fieldname": "column_break_63",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "value_engineering_opportunities",
+   "fieldtype": "Small Text",
+   "label": "Value Engineering Opportunities"
+  },
+  {
+   "fieldname": "competitive_factors",
+   "fieldtype": "Small Text",
+   "label": "Competitive Factors"
+  },
+  {
+   "fieldname": "risk_assessment_section",
+   "fieldtype": "Section Break",
+   "label": "Risk Assessment"
+  },
+  {
+   "fieldname": "risk_factors",
+   "fieldtype": "Table",
+   "label": "Risk Factors",
+   "options": "Risk Factor"
+  },
+  {
+   "fieldname": "risk_contingency_percentage",
+   "fieldtype": "Percent",
+   "label": "Risk Contingency Percentage"
+  },
+  {
+   "fieldname": "column_break_68",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "risk_contingency_amount",
+   "fieldtype": "Currency",
+   "label": "Risk Contingency Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "risk_notes",
+   "fieldtype": "Small Text",
+   "label": "Risk Notes"
+  },
+  {
+   "fieldname": "approval_section",
+   "fieldtype": "Section Break",
+   "label": "Approval"
+  },
+  {
+   "fieldname": "approval_status",
+   "fieldtype": "Select",
+   "label": "Approval Status",
+   "options": "Pending\nApproved\nRejected\nRevision Required",
+   "default": "Pending"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "approval_date",
+   "fieldtype": "Date",
+   "label": "Approval Date"
+  },
+  {
+   "fieldname": "column_break_74",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approval_comments",
+   "fieldtype": "Small Text",
+   "label": "Approval Comments"
+  },
+  {
+   "fieldname": "attachments_section",
+   "fieldtype": "Section Break",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Table",
+   "label": "Attachments",
+   "options": "File"
+  }
+ ],
+ "links": [],
+ "modified": "2023-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Pre Construction",
+ "name": "Project Estimation",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Construction Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Construction User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "autoname": "hash",
+ "creation": "2023-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "stakeholder_name",
+  "organization",
+  "role",
+  "influence_level",
+  "column_break_5",
+  "email",
+  "phone",
+  "communication_preference",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "stakeholder_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Stakeholder Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "organization",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Organization"
+  },
+  {
+   "fieldname": "role",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Role",
+   "options": "Client\nCommunity Representative\nGovernment Official\nRegulator\nInvestor\nSupplier\nContractor\nConsultant\nMedia\nNeighbor\nOther"
+  },
+  {
+   "default": "Medium",
+   "fieldname": "influence_level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Influence Level",
+   "options": "High\nMedium\nLow"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "communication_preference",
+   "fieldtype": "Select",
+   "label": "Communication Preference",
+   "options": "Email\nPhone\nMeeting\nWritten Report\nOther"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2023-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Pre Construction",
+ "name": "Project Stakeholder",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+} 

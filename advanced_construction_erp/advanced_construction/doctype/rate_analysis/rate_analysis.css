@@ -1,0 +1,173 @@
+/* Rate Analysis Form Styles */
+.rate-analysis-form {
+    padding: 20px;
+}
+
+/* Component Table Styles */
+.rate-components-table {
+    margin: 20px 0;
+}
+
+.rate-components-table .table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.rate-components-table th {
+    background-color: #f5f5f5;
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.rate-components-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Market Comparison Table Styles */
+.market-comparison-table {
+    margin: 20px 0;
+}
+
+.market-comparison-table .table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.market-comparison-table th {
+    background-color: #f5f5f5;
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.market-comparison-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Rate History Dialog Styles */
+.rate-history-dialog {
+    max-width: 800px;
+}
+
+.rate-history-dialog .table {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Rate Trend Dialog Styles */
+.rate-trend-dialog {
+    max-width: 1000px;
+}
+
+.rate-trend-dialog canvas {
+    width: 100% !important;
+    height: 400px !important;
+}
+
+/* Summary Section Styles */
+.rate-summary {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.rate-summary .summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.rate-summary .summary-item:last-child {
+    border-bottom: none;
+    font-weight: bold;
+}
+
+/* Status Badge Styles */
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status-draft {
+    background-color: #f0f0f0;
+    color: #666;
+}
+
+.status-submitted {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+.status-approved {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.status-rejected {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+/* Custom Button Styles */
+.custom-button {
+    margin: 5px;
+    padding: 8px 15px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.custom-button:hover {
+    opacity: 0.9;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .rate-analysis-form {
+        padding: 10px;
+    }
+
+    .rate-components-table,
+    .market-comparison-table {
+        overflow-x: auto;
+    }
+
+    .rate-summary .summary-item {
+        flex-direction: column;
+    }
+
+    .rate-summary .summary-item > div {
+        margin: 5px 0;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .rate-analysis-form {
+        padding: 0;
+    }
+
+    .custom-button {
+        display: none;
+    }
+
+    .rate-components-table,
+    .market-comparison-table {
+        page-break-inside: avoid;
+    }
+
+    .rate-summary {
+        background-color: white;
+        border: 1px solid #ddd;
+    }
+} 

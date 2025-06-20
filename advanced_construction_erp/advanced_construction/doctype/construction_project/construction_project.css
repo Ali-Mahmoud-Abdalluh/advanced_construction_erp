@@ -1,0 +1,173 @@
+/* Construction Project Form Styles */
+.construction-project-form {
+    padding: 20px;
+}
+
+/* Task List Styles */
+.task-list {
+    margin: 20px 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+.task-item {
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task-item:last-child {
+    border-bottom: none;
+}
+
+.task-item.completed {
+    background-color: #f8f9fa;
+}
+
+.task-item.in-progress {
+    background-color: #e8f0fe;
+}
+
+/* Budget Table Styles */
+.budget-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.budget-table th {
+    background-color: #f8f9fa;
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.budget-table td {
+    padding: 12px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Progress Bar Styles */
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background-color: #28a745;
+    transition: width 0.3s ease;
+}
+
+/* Status Badge Styles */
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.status-badge.completed {
+    background-color: #e6f4ea;
+    color: #1e7e34;
+}
+
+.status-badge.in-progress {
+    background-color: #e8f0fe;
+    color: #1a73e8;
+}
+
+.status-badge.on-hold {
+    background-color: #fff3e0;
+    color: #f57c00;
+}
+
+.status-badge.cancelled {
+    background-color: #fce8e6;
+    color: #d93025;
+}
+
+.status-badge.not-started {
+    background-color: #f1f3f4;
+    color: #5f6368;
+}
+
+/* Custom Button Styles */
+.custom-button {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.custom-button:hover {
+    background-color: #1557b0;
+}
+
+/* Form Section Styles */
+.form-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    margin-bottom: 20px;
+}
+
+.form-section h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #202124;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .construction-project-form {
+        padding: 10px;
+    }
+
+    .task-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .budget-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .form-section {
+        padding: 15px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .construction-project-form {
+        padding: 0;
+    }
+
+    .custom-button {
+        display: none;
+    }
+
+    .form-section {
+        box-shadow: none;
+        border: 1px solid #dee2e6;
+    }
+
+    .progress-bar {
+        border: 1px solid #dee2e6;
+    }
+} 

@@ -1,0 +1,173 @@
+{
+    "actions": [],
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "assembly_category",
+        "assembly_name",
+        "description",
+        "quantity",
+        "unit",
+        "material_details_section",
+        "material_cost_per_unit",
+        "total_material_cost",
+        "labor_details_section",
+        "labor_hours_per_unit",
+        "labor_rate_per_hour",
+        "total_labor_cost",
+        "equipment_details_section",
+        "equipment_hours_per_unit",
+        "equipment_rate_per_hour",
+        "total_equipment_cost",
+        "subcontractor_details_section",
+        "subcontractor_cost_per_unit",
+        "total_subcontractor_cost",
+        "cost_summary_section",
+        "total_cost_per_unit",
+        "total_cost"
+    ],
+    "fields": [
+        {
+            "fieldname": "assembly_category",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Assembly Category",
+            "options": "Foundation\nSuperstructure\nExterior Enclosure\nRoofing\nInterior Construction\nStairs\nInterior Finishes\nConveying Systems\nPlumbing\nHVAC\nFire Protection\nElectrical\nEquipment\nFurnishings\nSpecial Construction\nSite Preparation\nSite Improvements\nSite Utilities\nGeneral Conditions\nOther",
+            "reqd": 1
+        },
+        {
+            "fieldname": "assembly_name",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Assembly Name",
+            "reqd": 1
+        },
+        {
+            "fieldname": "description",
+            "fieldtype": "Text",
+            "label": "Description"
+        },
+        {
+            "fieldname": "quantity",
+            "fieldtype": "Float",
+            "in_list_view": 1,
+            "label": "Quantity",
+            "reqd": 1
+        },
+        {
+            "fieldname": "unit",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Unit",
+            "options": "m\nm²\nm³\nkg\nton\neach\nlot\nday\nhour\nweek\nmonth",
+            "reqd": 1
+        },
+        {
+            "fieldname": "material_details_section",
+            "fieldtype": "Section Break",
+            "label": "Material Details"
+        },
+        {
+            "fieldname": "material_cost_per_unit",
+            "fieldtype": "Currency",
+            "label": "Material Cost Per Unit",
+            "reqd": 1
+        },
+        {
+            "fieldname": "total_material_cost",
+            "fieldtype": "Currency",
+            "label": "Total Material Cost",
+            "read_only": 1
+        },
+        {
+            "fieldname": "labor_details_section",
+            "fieldtype": "Section Break",
+            "label": "Labor Details"
+        },
+        {
+            "fieldname": "labor_hours_per_unit",
+            "fieldtype": "Float",
+            "label": "Labor Hours Per Unit",
+            "reqd": 1
+        },
+        {
+            "fieldname": "labor_rate_per_hour",
+            "fieldtype": "Currency",
+            "label": "Labor Rate Per Hour",
+            "reqd": 1
+        },
+        {
+            "fieldname": "total_labor_cost",
+            "fieldtype": "Currency",
+            "label": "Total Labor Cost",
+            "read_only": 1
+        },
+        {
+            "fieldname": "equipment_details_section",
+            "fieldtype": "Section Break",
+            "label": "Equipment Details"
+        },
+        {
+            "fieldname": "equipment_hours_per_unit",
+            "fieldtype": "Float",
+            "label": "Equipment Hours Per Unit"
+        },
+        {
+            "fieldname": "equipment_rate_per_hour",
+            "fieldtype": "Currency",
+            "label": "Equipment Rate Per Hour"
+        },
+        {
+            "fieldname": "total_equipment_cost",
+            "fieldtype": "Currency",
+            "label": "Total Equipment Cost",
+            "read_only": 1
+        },
+        {
+            "fieldname": "subcontractor_details_section",
+            "fieldtype": "Section Break",
+            "label": "Subcontractor Details"
+        },
+        {
+            "fieldname": "subcontractor_cost_per_unit",
+            "fieldtype": "Currency",
+            "label": "Subcontractor Cost Per Unit"
+        },
+        {
+            "fieldname": "total_subcontractor_cost",
+            "fieldtype": "Currency",
+            "label": "Total Subcontractor Cost",
+            "read_only": 1
+        },
+        {
+            "fieldname": "cost_summary_section",
+            "fieldtype": "Section Break",
+            "label": "Cost Summary"
+        },
+        {
+            "fieldname": "total_cost_per_unit",
+            "fieldtype": "Currency",
+            "label": "Total Cost Per Unit",
+            "read_only": 1
+        },
+        {
+            "fieldname": "total_cost",
+            "fieldtype": "Currency",
+            "in_list_view": 1,
+            "label": "Total Cost",
+            "read_only": 1
+        }
+    ],
+    "istable": 1,
+    "modified": "2024-01-01 00:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Construction Estimation",
+    "name": "Preliminary Estimate Item",
+    "owner": "Administrator",
+    "permissions": [],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+} 

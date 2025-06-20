@@ -1,0 +1,64 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "attachment_type",
+        "attachment_description",
+        "attachment",
+        "date_added",
+        "added_by"
+    ],
+    "fields": [
+        {
+            "fieldname": "attachment_type",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Attachment Type",
+            "options": "Photo\nVideo\nDocument\nReport\nCertificate\nOther",
+            "reqd": 1
+        },
+        {
+            "fieldname": "attachment_description",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Description",
+            "reqd": 1
+        },
+        {
+            "fieldname": "attachment",
+            "fieldtype": "Attach",
+            "in_list_view": 1,
+            "label": "Attachment",
+            "reqd": 1
+        },
+        {
+            "fieldname": "date_added",
+            "fieldtype": "Date",
+            "in_list_view": 1,
+            "label": "Date Added",
+            "reqd": 1
+        },
+        {
+            "fieldname": "added_by",
+            "fieldtype": "Link",
+            "label": "Added By",
+            "options": "User",
+            "reqd": 1
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "istable": 1,
+    "links": [],
+    "modified": "2024-01-01 00:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Quality Management",
+    "name": "Quality Inspection Attachment",
+    "owner": "Administrator",
+    "permissions": [],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": []
+} 

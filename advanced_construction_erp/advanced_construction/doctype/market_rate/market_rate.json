@@ -1,0 +1,136 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "item_code",
+        "item_name",
+        "rate",
+        "unit",
+        "valid_from",
+        "valid_to",
+        "is_active",
+        "supplier",
+        "location",
+        "remarks"
+    ],
+    "fields": [
+        {
+            "fieldname": "item_code",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Item Code",
+            "options": "Item",
+            "reqd": 1
+        },
+        {
+            "fieldname": "item_name",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Item Name",
+            "read_only": 1
+        },
+        {
+            "fieldname": "rate",
+            "fieldtype": "Currency",
+            "in_list_view": 1,
+            "label": "Rate",
+            "reqd": 1
+        },
+        {
+            "fieldname": "unit",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Unit",
+            "options": "UOM",
+            "reqd": 1
+        },
+        {
+            "fieldname": "valid_from",
+            "fieldtype": "Date",
+            "in_list_view": 1,
+            "label": "Valid From",
+            "reqd": 1
+        },
+        {
+            "fieldname": "valid_to",
+            "fieldtype": "Date",
+            "in_list_view": 1,
+            "label": "Valid To"
+        },
+        {
+            "fieldname": "is_active",
+            "fieldtype": "Check",
+            "in_list_view": 1,
+            "label": "Is Active",
+            "reqd": 1
+        },
+        {
+            "fieldname": "supplier",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Supplier",
+            "options": "Supplier"
+        },
+        {
+            "fieldname": "location",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Location"
+        },
+        {
+            "fieldname": "remarks",
+            "fieldtype": "Small Text",
+            "label": "Remarks"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2024-01-01 00:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Construction Project",
+    "name": "Market Rate",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Construction Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Construction User",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": []
+} 

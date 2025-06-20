@@ -1,0 +1,98 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "milestone_name",
+        "description",
+        "due_date",
+        "status",
+        "completion_date",
+        "payment_percentage",
+        "payment_amount",
+        "payment_status",
+        "payment_date",
+        "attachments"
+    ],
+    "fields": [
+        {
+            "fieldname": "milestone_name",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Milestone Name",
+            "reqd": 1
+        },
+        {
+            "fieldname": "description",
+            "fieldtype": "Text Editor",
+            "label": "Description"
+        },
+        {
+            "fieldname": "due_date",
+            "fieldtype": "Date",
+            "in_list_view": 1,
+            "label": "Due Date",
+            "reqd": 1
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Status",
+            "options": "Pending\nIn Progress\nCompleted\nDelayed\nCancelled",
+            "reqd": 1
+        },
+        {
+            "fieldname": "completion_date",
+            "fieldtype": "Date",
+            "label": "Completion Date"
+        },
+        {
+            "fieldname": "payment_percentage",
+            "fieldtype": "Percent",
+            "in_list_view": 1,
+            "label": "Payment Percentage",
+            "reqd": 1
+        },
+        {
+            "fieldname": "payment_amount",
+            "fieldtype": "Currency",
+            "in_list_view": 1,
+            "label": "Payment Amount",
+            "reqd": 1
+        },
+        {
+            "fieldname": "payment_status",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Payment Status",
+            "options": "Not Invoiced\nInvoiced\nPartially Paid\nPaid\nDisputed",
+            "reqd": 1
+        },
+        {
+            "fieldname": "payment_date",
+            "fieldtype": "Date",
+            "label": "Payment Date"
+        },
+        {
+            "fieldname": "attachments",
+            "fieldtype": "Table",
+            "label": "Attachments",
+            "options": "Contract Document"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "istable": 1,
+    "links": [],
+    "modified": "2024-01-01 00:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Construction Project",
+    "name": "Contract Milestone",
+    "owner": "Administrator",
+    "permissions": [],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": []
+} 

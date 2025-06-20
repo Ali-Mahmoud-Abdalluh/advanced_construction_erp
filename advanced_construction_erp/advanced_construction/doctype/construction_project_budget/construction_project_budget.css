@@ -1,0 +1,207 @@
+/* Construction Project Budget Form Styles */
+.construction-project-budget-form {
+    padding: 20px;
+}
+
+/* Budget Details Section */
+.budget-details {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    margin-bottom: 20px;
+}
+
+.budget-details h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #202124;
+}
+
+/* Budget Table Styles */
+.budget-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.budget-table th {
+    background-color: #f8f9fa;
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.budget-table td {
+    padding: 12px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.budget-table tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Budget Category Styles */
+.budget-category {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+.budget-category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.budget-category-title {
+    font-weight: 500;
+    color: #202124;
+}
+
+.budget-category-total {
+    font-weight: 600;
+    color: #1a73e8;
+}
+
+/* Cost Breakdown Styles */
+.cost-breakdown {
+    margin: 20px 0;
+}
+
+.cost-breakdown-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.cost-breakdown-item:last-child {
+    border-bottom: none;
+}
+
+.cost-breakdown-label {
+    color: #5f6368;
+}
+
+.cost-breakdown-value {
+    font-weight: 500;
+}
+
+.cost-breakdown-total {
+    font-weight: 600;
+    color: #1a73e8;
+}
+
+/* Variance Styles */
+.variance {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.variance.positive {
+    background-color: #e6f4ea;
+    color: #1e7e34;
+}
+
+.variance.negative {
+    background-color: #fce8e6;
+    color: #d93025;
+}
+
+.variance.neutral {
+    background-color: #f1f3f4;
+    color: #5f6368;
+}
+
+/* Custom Button Styles */
+.custom-button {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.custom-button:hover {
+    background-color: #1557b0;
+}
+
+/* Form Section Styles */
+.form-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    margin-bottom: 20px;
+}
+
+.form-section h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #202124;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .construction-project-budget-form {
+        padding: 10px;
+    }
+
+    .budget-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .budget-category-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .budget-category-total {
+        margin-top: 5px;
+    }
+
+    .cost-breakdown-item {
+        flex-direction: column;
+    }
+
+    .cost-breakdown-value {
+        margin-top: 5px;
+    }
+
+    .form-section {
+        padding: 15px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .construction-project-budget-form {
+        padding: 0;
+    }
+
+    .custom-button {
+        display: none;
+    }
+
+    .budget-details,
+    .form-section {
+        box-shadow: none;
+        border: 1px solid #dee2e6;
+    }
+
+    .budget-table th {
+        background-color: #f8f9fa !important;
+        -webkit-print-color-adjust: exact;
+    }
+} 

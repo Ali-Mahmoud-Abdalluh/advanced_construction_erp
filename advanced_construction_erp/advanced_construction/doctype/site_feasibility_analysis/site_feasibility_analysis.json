@@ -1,0 +1,539 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "SFA-.YYYY.-.#####",
+ "creation": "2023-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "client_details_section",
+  "client_name",
+  "opportunity",
+  "contact_person",
+  "contact_email",
+  "contact_phone",
+  "column_break_6",
+  "analysis_date",
+  "analyst",
+  "status",
+  "site_details_section",
+  "site_location",
+  "site_address",
+  "site_area",
+  "site_coordinates",
+  "column_break_14",
+  "project_type",
+  "estimated_budget",
+  "site_ownership",
+  "site_images",
+  "technical_feasibility_section",
+  "soil_condition",
+  "topography",
+  "accessibility",
+  "utilities_availability",
+  "column_break_22",
+  "technical_challenges",
+  "technical_feasibility",
+  "technical_remarks",
+  "financial_feasibility_section",
+  "land_cost",
+  "development_cost",
+  "estimated_roi",
+  "payback_period",
+  "column_break_30",
+  "funding_options",
+  "financial_challenges",
+  "financial_feasibility",
+  "financial_remarks",
+  "legal_regulatory_section",
+  "zoning_regulations",
+  "building_permits",
+  "environmental_permits",
+  "column_break_38",
+  "legal_constraints",
+  "legal_feasibility",
+  "legal_remarks",
+  "environmental_assessment_section",
+  "environmental_impact",
+  "climate_considerations",
+  "sustainability_options",
+  "column_break_45",
+  "environmental_challenges",
+  "environmental_feasibility",
+  "environmental_remarks",
+  "social_community_section",
+  "community_impact",
+  "stakeholder_feedback",
+  "public_perception",
+  "column_break_52",
+  "social_challenges",
+  "social_feasibility",
+  "social_remarks",
+  "swot_analysis_section",
+  "strengths",
+  "weaknesses",
+  "column_break_58",
+  "opportunities",
+  "threats",
+  "conclusion_section",
+  "feasibility_score",
+  "recommendation",
+  "conclusion",
+  "action_plan",
+  "attachments_section",
+  "attachments"
+ ],
+ "fields": [
+  {
+   "fieldname": "client_details_section",
+   "fieldtype": "Section Break",
+   "label": "Client Details"
+  },
+  {
+   "fieldname": "client_name",
+   "fieldtype": "Data",
+   "label": "Client Name"
+  },
+  {
+   "fieldname": "opportunity",
+   "fieldtype": "Link",
+   "label": "Opportunity",
+   "options": "Construction Opportunity"
+  },
+  {
+   "fieldname": "contact_person",
+   "fieldtype": "Data",
+   "label": "Contact Person"
+  },
+  {
+   "fieldname": "contact_email",
+   "fieldtype": "Data",
+   "label": "Contact Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "contact_phone",
+   "fieldtype": "Data",
+   "label": "Contact Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "analysis_date",
+   "fieldtype": "Date",
+   "label": "Analysis Date"
+  },
+  {
+   "fieldname": "analyst",
+   "fieldtype": "Link",
+   "label": "Analyst",
+   "options": "User"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nIn Progress\nCompleted\nApproved\nRejected"
+  },
+  {
+   "fieldname": "site_details_section",
+   "fieldtype": "Section Break",
+   "label": "Site Details"
+  },
+  {
+   "fieldname": "site_location",
+   "fieldtype": "Data",
+   "label": "Site Location"
+  },
+  {
+   "fieldname": "site_address",
+   "fieldtype": "Small Text",
+   "label": "Site Address"
+  },
+  {
+   "fieldname": "site_area",
+   "fieldtype": "Float",
+   "label": "Site Area (sq. meters)"
+  },
+  {
+   "fieldname": "site_coordinates",
+   "fieldtype": "Geolocation",
+   "label": "Site Coordinates"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "project_type",
+   "fieldtype": "Select",
+   "label": "Project Type",
+   "options": "Residential\nCommercial\nIndustrial\nInfrastructure\nHospitality\nEducational\nHealthcare\nMixed-Use\nOther"
+  },
+  {
+   "fieldname": "estimated_budget",
+   "fieldtype": "Currency",
+   "label": "Estimated Budget"
+  },
+  {
+   "fieldname": "site_ownership",
+   "fieldtype": "Select",
+   "label": "Site Ownership",
+   "options": "Client Owned\nTo Be Purchased\nLeased\nGovernment Land\nPartnership\nOther"
+  },
+  {
+   "fieldname": "site_images",
+   "fieldtype": "Table",
+   "label": "Site Images",
+   "options": "File"
+  },
+  {
+   "fieldname": "technical_feasibility_section",
+   "fieldtype": "Section Break",
+   "label": "Technical Feasibility"
+  },
+  {
+   "fieldname": "soil_condition",
+   "fieldtype": "Select",
+   "label": "Soil Condition",
+   "options": "Excellent\nGood\nFair\nPoor\nNeeds Remediation\nNot Tested"
+  },
+  {
+   "fieldname": "topography",
+   "fieldtype": "Select",
+   "label": "Topography",
+   "options": "Flat\nGentle Slope\nModerate Slope\nSteep\nIrregular\nNeeds Grading"
+  },
+  {
+   "fieldname": "accessibility",
+   "fieldtype": "Select",
+   "label": "Accessibility",
+   "options": "Excellent\nGood\nFair\nPoor\nNeeds Development"
+  },
+  {
+   "fieldname": "utilities_availability",
+   "fieldtype": "Table",
+   "label": "Utilities Availability",
+   "options": "Utility Item"
+  },
+  {
+   "fieldname": "column_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "technical_challenges",
+   "fieldtype": "Text Editor",
+   "label": "Technical Challenges"
+  },
+  {
+   "fieldname": "technical_feasibility",
+   "fieldtype": "Rating",
+   "label": "Technical Feasibility Score (0-100)",
+   "options": "100"
+  },
+  {
+   "fieldname": "technical_remarks",
+   "fieldtype": "Text Editor",
+   "label": "Technical Remarks"
+  },
+  {
+   "fieldname": "financial_feasibility_section",
+   "fieldtype": "Section Break",
+   "label": "Financial Feasibility"
+  },
+  {
+   "fieldname": "land_cost",
+   "fieldtype": "Currency",
+   "label": "Land Cost"
+  },
+  {
+   "fieldname": "development_cost",
+   "fieldtype": "Currency",
+   "label": "Development Cost"
+  },
+  {
+   "fieldname": "estimated_roi",
+   "fieldtype": "Percent",
+   "label": "Estimated ROI"
+  },
+  {
+   "fieldname": "payback_period",
+   "fieldtype": "Float",
+   "label": "Payback Period (Years)"
+  },
+  {
+   "fieldname": "column_break_30",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "funding_options",
+   "fieldtype": "Text Editor",
+   "label": "Funding Options"
+  },
+  {
+   "fieldname": "financial_challenges",
+   "fieldtype": "Text Editor",
+   "label": "Financial Challenges"
+  },
+  {
+   "fieldname": "financial_feasibility",
+   "fieldtype": "Rating",
+   "label": "Financial Feasibility Score (0-100)",
+   "options": "100"
+  },
+  {
+   "fieldname": "financial_remarks",
+   "fieldtype": "Text Editor",
+   "label": "Financial Remarks"
+  },
+  {
+   "fieldname": "legal_regulatory_section",
+   "fieldtype": "Section Break",
+   "label": "Legal & Regulatory Assessment"
+  },
+  {
+   "fieldname": "zoning_regulations",
+   "fieldtype": "Text Editor",
+   "label": "Zoning Regulations"
+  },
+  {
+   "fieldname": "building_permits",
+   "fieldtype": "Text Editor",
+   "label": "Building Permits"
+  },
+  {
+   "fieldname": "environmental_permits",
+   "fieldtype": "Text Editor",
+   "label": "Environmental Permits"
+  },
+  {
+   "fieldname": "column_break_38",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "legal_constraints",
+   "fieldtype": "Text Editor",
+   "label": "Legal Constraints"
+  },
+  {
+   "fieldname": "legal_feasibility",
+   "fieldtype": "Rating",
+   "label": "Legal Feasibility Score (0-100)",
+   "options": "100"
+  },
+  {
+   "fieldname": "legal_remarks",
+   "fieldtype": "Text Editor",
+   "label": "Legal Remarks"
+  },
+  {
+   "fieldname": "environmental_assessment_section",
+   "fieldtype": "Section Break",
+   "label": "Environmental Assessment"
+  },
+  {
+   "fieldname": "environmental_impact",
+   "fieldtype": "Text Editor",
+   "label": "Environmental Impact"
+  },
+  {
+   "fieldname": "climate_considerations",
+   "fieldtype": "Text Editor",
+   "label": "Climate Considerations"
+  },
+  {
+   "fieldname": "sustainability_options",
+   "fieldtype": "Text Editor",
+   "label": "Sustainability Options"
+  },
+  {
+   "fieldname": "column_break_45",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "environmental_challenges",
+   "fieldtype": "Text Editor",
+   "label": "Environmental Challenges"
+  },
+  {
+   "fieldname": "environmental_feasibility",
+   "fieldtype": "Rating",
+   "label": "Environmental Feasibility Score (0-100)",
+   "options": "100"
+  },
+  {
+   "fieldname": "environmental_remarks",
+   "fieldtype": "Text Editor",
+   "label": "Environmental Remarks"
+  },
+  {
+   "fieldname": "social_community_section",
+   "fieldtype": "Section Break",
+   "label": "Social & Community Assessment"
+  },
+  {
+   "fieldname": "community_impact",
+   "fieldtype": "Text Editor",
+   "label": "Community Impact"
+  },
+  {
+   "fieldname": "stakeholder_feedback",
+   "fieldtype": "Text Editor",
+   "label": "Stakeholder Feedback"
+  },
+  {
+   "fieldname": "public_perception",
+   "fieldtype": "Text Editor",
+   "label": "Public Perception"
+  },
+  {
+   "fieldname": "column_break_52",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "social_challenges",
+   "fieldtype": "Text Editor",
+   "label": "Social Challenges"
+  },
+  {
+   "fieldname": "social_feasibility",
+   "fieldtype": "Rating",
+   "label": "Social Feasibility Score (0-100)",
+   "options": "100"
+  },
+  {
+   "fieldname": "social_remarks",
+   "fieldtype": "Text Editor",
+   "label": "Social Remarks"
+  },
+  {
+   "fieldname": "swot_analysis_section",
+   "fieldtype": "Section Break",
+   "label": "SWOT Analysis"
+  },
+  {
+   "fieldname": "strengths",
+   "fieldtype": "Text Editor",
+   "label": "Strengths"
+  },
+  {
+   "fieldname": "weaknesses",
+   "fieldtype": "Text Editor",
+   "label": "Weaknesses"
+  },
+  {
+   "fieldname": "column_break_58",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "opportunities",
+   "fieldtype": "Text Editor",
+   "label": "Opportunities"
+  },
+  {
+   "fieldname": "threats",
+   "fieldtype": "Text Editor",
+   "label": "Threats"
+  },
+  {
+   "fieldname": "conclusion_section",
+   "fieldtype": "Section Break",
+   "label": "Conclusion & Recommendations"
+  },
+  {
+   "fieldname": "feasibility_score",
+   "fieldtype": "Float",
+   "label": "Overall Feasibility Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "recommendation",
+   "fieldtype": "Data",
+   "label": "Recommendation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "conclusion",
+   "fieldtype": "Text Editor",
+   "label": "Conclusion"
+  },
+  {
+   "fieldname": "action_plan",
+   "fieldtype": "Text Editor",
+   "label": "Action Plan"
+  },
+  {
+   "fieldname": "attachments_section",
+   "fieldtype": "Section Break",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Table",
+   "label": "Attachments",
+   "options": "File"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Pre Construction",
+ "name": "Site Feasibility Analysis",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects User",
+   "share": 1,
+   "write": 0
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+} 

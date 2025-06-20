@@ -1,0 +1,93 @@
+{
+ "actions": [],
+ "autoname": "hash",
+ "creation": "2023-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "resource_type",
+  "resource_name",
+  "quantity",
+  "uom",
+  "column_break_5",
+  "required_from",
+  "required_until",
+  "procurement_method",
+  "estimated_cost",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "resource_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Resource Type",
+   "options": "Labor\nEquipment\nMaterial\nSubcontractor\nConsultant\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "resource_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Resource Name",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Quantity",
+   "reqd": 1
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "label": "UOM",
+   "options": "UOM"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "required_from",
+   "fieldtype": "Date",
+   "label": "Required From"
+  },
+  {
+   "fieldname": "required_until",
+   "fieldtype": "Date",
+   "label": "Required Until"
+  },
+  {
+   "fieldname": "procurement_method",
+   "fieldtype": "Select",
+   "label": "Procurement Method",
+   "options": "Purchase\nRent\nLease\nHire\nIn-House\nOther"
+  },
+  {
+   "fieldname": "estimated_cost",
+   "fieldtype": "Currency",
+   "label": "Estimated Cost"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2023-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Pre Construction",
+ "name": "Resource Requirement",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+} 

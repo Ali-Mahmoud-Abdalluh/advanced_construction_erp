@@ -1,0 +1,766 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:study_name",
+ "creation": "2023-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_information_section",
+  "study_name",
+  "status",
+  "opportunity_assessment",
+  "lead_reference",
+  "lead_name",
+  "column_break_6",
+  "study_date",
+  "conducted_by",
+  "organization",
+  "project_information_section",
+  "project_type",
+  "project_description",
+  "estimated_budget",
+  "currency",
+  "column_break_15",
+  "expected_start_date",
+  "expected_completion_date",
+  "project_location",
+  "market_feasibility_section",
+  "market_demand_analysis",
+  "target_market_segment",
+  "market_size",
+  "column_break_22",
+  "market_growth_rate",
+  "competition_analysis",
+  "market_entry_strategy",
+  "technical_feasibility_section",
+  "site_suitability",
+  "site_analysis_tab",
+  "site_location",
+  "site_size",
+  "site_topography",
+  "soil_conditions",
+  "column_break_31",
+  "environmental_factors",
+  "access_to_utilities",
+  "zoning_regulations",
+  "site_constraints",
+  "design_feasibility_tab",
+  "architectural_concept",
+  "space_requirements",
+  "building_systems",
+  "column_break_39",
+  "construction_methodology",
+  "technology_requirements",
+  "design_constraints",
+  "resource_feasibility_tab",
+  "material_availability",
+  "equipment_requirements",
+  "labor_requirements",
+  "column_break_46",
+  "specialized_skills_needed",
+  "subcontractor_availability",
+  "resource_constraints",
+  "financial_feasibility_section",
+  "cost_analysis_tab",
+  "land_acquisition_cost",
+  "design_cost",
+  "construction_cost",
+  "equipment_cost",
+  "column_break_55",
+  "permit_fees",
+  "contingency_cost",
+  "other_costs",
+  "total_project_cost",
+  "revenue_analysis_tab",
+  "revenue_sources",
+  "projected_revenue",
+  "revenue_timeline",
+  "column_break_63",
+  "pricing_strategy",
+  "break_even_analysis",
+  "financial_metrics_tab",
+  "roi",
+  "irr",
+  "npv",
+  "payback_period",
+  "column_break_70",
+  "debt_service_coverage_ratio",
+  "funding_sources",
+  "financial_risks",
+  "legal_regulatory_section",
+  "permits_required",
+  "regulatory_compliance",
+  "legal_constraints",
+  "column_break_77",
+  "environmental_compliance",
+  "health_safety_requirements",
+  "legal_risks",
+  "timeline_feasibility_section",
+  "project_phases",
+  "estimated_timeline",
+  "critical_path_activities",
+  "column_break_84",
+  "timeline_constraints",
+  "schedule_risks",
+  "risk_assessment_section",
+  "risk_factors",
+  "risk_probability",
+  "risk_impact",
+  "column_break_90",
+  "risk_mitigation_strategies",
+  "overall_risk_assessment",
+  "conclusion_section",
+  "technical_feasibility_conclusion",
+  "financial_feasibility_conclusion",
+  "market_feasibility_conclusion",
+  "column_break_96",
+  "legal_feasibility_conclusion",
+  "timeline_feasibility_conclusion",
+  "overall_feasibility_conclusion",
+  "recommendation",
+  "attachments_section",
+  "attachments"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_information_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "fieldname": "study_name",
+   "fieldtype": "Data",
+   "label": "Study Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nIn Progress\nCompleted\nApproved\nRejected",
+   "default": "Draft"
+  },
+  {
+   "fieldname": "opportunity_assessment",
+   "fieldtype": "Link",
+   "label": "Opportunity Assessment",
+   "options": "Opportunity Assessment"
+  },
+  {
+   "fieldname": "lead_reference",
+   "fieldtype": "Link",
+   "label": "Lead Reference",
+   "options": "Construction Lead"
+  },
+  {
+   "fieldname": "lead_name",
+   "fieldtype": "Data",
+   "label": "Lead Name",
+   "fetch_from": "lead_reference.lead_name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "study_date",
+   "fieldtype": "Date",
+   "label": "Study Date",
+   "default": "Today"
+  },
+  {
+   "fieldname": "conducted_by",
+   "fieldtype": "Link",
+   "label": "Conducted By",
+   "options": "User"
+  },
+  {
+   "fieldname": "organization",
+   "fieldtype": "Data",
+   "label": "Organization",
+   "fetch_from": "lead_reference.organization_name"
+  },
+  {
+   "fieldname": "project_information_section",
+   "fieldtype": "Section Break",
+   "label": "Project Information"
+  },
+  {
+   "fieldname": "project_type",
+   "fieldtype": "Select",
+   "label": "Project Type",
+   "options": "Residential\nCommercial\nIndustrial\nInfrastructure\nInstitutional\nMixed Use\nOther"
+  },
+  {
+   "fieldname": "project_description",
+   "fieldtype": "Text Editor",
+   "label": "Project Description"
+  },
+  {
+   "fieldname": "estimated_budget",
+   "fieldtype": "Currency",
+   "label": "Estimated Budget"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "expected_start_date",
+   "fieldtype": "Date",
+   "label": "Expected Start Date"
+  },
+  {
+   "fieldname": "expected_completion_date",
+   "fieldtype": "Date",
+   "label": "Expected Completion Date"
+  },
+  {
+   "fieldname": "project_location",
+   "fieldtype": "Small Text",
+   "label": "Project Location"
+  },
+  {
+   "fieldname": "market_feasibility_section",
+   "fieldtype": "Section Break",
+   "label": "Market Feasibility"
+  },
+  {
+   "fieldname": "market_demand_analysis",
+   "fieldtype": "Small Text",
+   "label": "Market Demand Analysis"
+  },
+  {
+   "fieldname": "target_market_segment",
+   "fieldtype": "Small Text",
+   "label": "Target Market Segment"
+  },
+  {
+   "fieldname": "market_size",
+   "fieldtype": "Data",
+   "label": "Market Size"
+  },
+  {
+   "fieldname": "column_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "market_growth_rate",
+   "fieldtype": "Percent",
+   "label": "Market Growth Rate"
+  },
+  {
+   "fieldname": "competition_analysis",
+   "fieldtype": "Small Text",
+   "label": "Competition Analysis"
+  },
+  {
+   "fieldname": "market_entry_strategy",
+   "fieldtype": "Small Text",
+   "label": "Market Entry Strategy"
+  },
+  {
+   "fieldname": "technical_feasibility_section",
+   "fieldtype": "Section Break",
+   "label": "Technical Feasibility"
+  },
+  {
+   "fieldname": "site_suitability",
+   "fieldtype": "Select",
+   "label": "Overall Site Suitability",
+   "options": "Excellent\nGood\nAdequate\nPoor\nUnsuitable"
+  },
+  {
+   "fieldname": "site_analysis_tab",
+   "fieldtype": "Tab Break",
+   "label": "Site Analysis"
+  },
+  {
+   "fieldname": "site_location",
+   "fieldtype": "Small Text",
+   "label": "Site Location Details"
+  },
+  {
+   "fieldname": "site_size",
+   "fieldtype": "Data",
+   "label": "Site Size"
+  },
+  {
+   "fieldname": "site_topography",
+   "fieldtype": "Small Text",
+   "label": "Site Topography"
+  },
+  {
+   "fieldname": "soil_conditions",
+   "fieldtype": "Small Text",
+   "label": "Soil Conditions"
+  },
+  {
+   "fieldname": "column_break_31",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "environmental_factors",
+   "fieldtype": "Small Text",
+   "label": "Environmental Factors"
+  },
+  {
+   "fieldname": "access_to_utilities",
+   "fieldtype": "Small Text",
+   "label": "Access to Utilities"
+  },
+  {
+   "fieldname": "zoning_regulations",
+   "fieldtype": "Small Text",
+   "label": "Zoning Regulations"
+  },
+  {
+   "fieldname": "site_constraints",
+   "fieldtype": "Small Text",
+   "label": "Site Constraints"
+  },
+  {
+   "fieldname": "design_feasibility_tab",
+   "fieldtype": "Tab Break",
+   "label": "Design Feasibility"
+  },
+  {
+   "fieldname": "architectural_concept",
+   "fieldtype": "Small Text",
+   "label": "Architectural Concept"
+  },
+  {
+   "fieldname": "space_requirements",
+   "fieldtype": "Small Text",
+   "label": "Space Requirements"
+  },
+  {
+   "fieldname": "building_systems",
+   "fieldtype": "Small Text",
+   "label": "Building Systems"
+  },
+  {
+   "fieldname": "column_break_39",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "construction_methodology",
+   "fieldtype": "Small Text",
+   "label": "Construction Methodology"
+  },
+  {
+   "fieldname": "technology_requirements",
+   "fieldtype": "Small Text",
+   "label": "Technology Requirements"
+  },
+  {
+   "fieldname": "design_constraints",
+   "fieldtype": "Small Text",
+   "label": "Design Constraints"
+  },
+  {
+   "fieldname": "resource_feasibility_tab",
+   "fieldtype": "Tab Break",
+   "label": "Resource Feasibility"
+  },
+  {
+   "fieldname": "material_availability",
+   "fieldtype": "Select",
+   "label": "Material Availability",
+   "options": "Excellent\nGood\nAdequate\nLimited\nPoor"
+  },
+  {
+   "fieldname": "equipment_requirements",
+   "fieldtype": "Small Text",
+   "label": "Equipment Requirements"
+  },
+  {
+   "fieldname": "labor_requirements",
+   "fieldtype": "Small Text",
+   "label": "Labor Requirements"
+  },
+  {
+   "fieldname": "column_break_46",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "specialized_skills_needed",
+   "fieldtype": "Small Text",
+   "label": "Specialized Skills Needed"
+  },
+  {
+   "fieldname": "subcontractor_availability",
+   "fieldtype": "Select",
+   "label": "Subcontractor Availability",
+   "options": "Excellent\nGood\nAdequate\nLimited\nPoor"
+  },
+  {
+   "fieldname": "resource_constraints",
+   "fieldtype": "Small Text",
+   "label": "Resource Constraints"
+  },
+  {
+   "fieldname": "financial_feasibility_section",
+   "fieldtype": "Section Break",
+   "label": "Financial Feasibility"
+  },
+  {
+   "fieldname": "cost_analysis_tab",
+   "fieldtype": "Tab Break",
+   "label": "Cost Analysis"
+  },
+  {
+   "fieldname": "land_acquisition_cost",
+   "fieldtype": "Currency",
+   "label": "Land Acquisition Cost"
+  },
+  {
+   "fieldname": "design_cost",
+   "fieldtype": "Currency",
+   "label": "Design Cost"
+  },
+  {
+   "fieldname": "construction_cost",
+   "fieldtype": "Currency",
+   "label": "Construction Cost"
+  },
+  {
+   "fieldname": "equipment_cost",
+   "fieldtype": "Currency",
+   "label": "Equipment Cost"
+  },
+  {
+   "fieldname": "column_break_55",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "permit_fees",
+   "fieldtype": "Currency",
+   "label": "Permit Fees"
+  },
+  {
+   "fieldname": "contingency_cost",
+   "fieldtype": "Currency",
+   "label": "Contingency Cost"
+  },
+  {
+   "fieldname": "other_costs",
+   "fieldtype": "Currency",
+   "label": "Other Costs"
+  },
+  {
+   "fieldname": "total_project_cost",
+   "fieldtype": "Currency",
+   "label": "Total Project Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "revenue_analysis_tab",
+   "fieldtype": "Tab Break",
+   "label": "Revenue Analysis"
+  },
+  {
+   "fieldname": "revenue_sources",
+   "fieldtype": "Small Text",
+   "label": "Revenue Sources"
+  },
+  {
+   "fieldname": "projected_revenue",
+   "fieldtype": "Currency",
+   "label": "Projected Revenue"
+  },
+  {
+   "fieldname": "revenue_timeline",
+   "fieldtype": "Small Text",
+   "label": "Revenue Timeline"
+  },
+  {
+   "fieldname": "column_break_63",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pricing_strategy",
+   "fieldtype": "Small Text",
+   "label": "Pricing Strategy"
+  },
+  {
+   "fieldname": "break_even_analysis",
+   "fieldtype": "Small Text",
+   "label": "Break-even Analysis"
+  },
+  {
+   "fieldname": "financial_metrics_tab",
+   "fieldtype": "Tab Break",
+   "label": "Financial Metrics"
+  },
+  {
+   "fieldname": "roi",
+   "fieldtype": "Percent",
+   "label": "Return on Investment (ROI)"
+  },
+  {
+   "fieldname": "irr",
+   "fieldtype": "Percent",
+   "label": "Internal Rate of Return (IRR)"
+  },
+  {
+   "fieldname": "npv",
+   "fieldtype": "Currency",
+   "label": "Net Present Value (NPV)"
+  },
+  {
+   "fieldname": "payback_period",
+   "fieldtype": "Data",
+   "label": "Payback Period"
+  },
+  {
+   "fieldname": "column_break_70",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "debt_service_coverage_ratio",
+   "fieldtype": "Float",
+   "label": "Debt Service Coverage Ratio",
+   "precision": 2
+  },
+  {
+   "fieldname": "funding_sources",
+   "fieldtype": "Small Text",
+   "label": "Funding Sources"
+  },
+  {
+   "fieldname": "financial_risks",
+   "fieldtype": "Small Text",
+   "label": "Financial Risks"
+  },
+  {
+   "fieldname": "legal_regulatory_section",
+   "fieldtype": "Section Break",
+   "label": "Legal & Regulatory Feasibility"
+  },
+  {
+   "fieldname": "permits_required",
+   "fieldtype": "Small Text",
+   "label": "Permits Required"
+  },
+  {
+   "fieldname": "regulatory_compliance",
+   "fieldtype": "Small Text",
+   "label": "Regulatory Compliance"
+  },
+  {
+   "fieldname": "legal_constraints",
+   "fieldtype": "Small Text",
+   "label": "Legal Constraints"
+  },
+  {
+   "fieldname": "column_break_77",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "environmental_compliance",
+   "fieldtype": "Small Text",
+   "label": "Environmental Compliance"
+  },
+  {
+   "fieldname": "health_safety_requirements",
+   "fieldtype": "Small Text",
+   "label": "Health & Safety Requirements"
+  },
+  {
+   "fieldname": "legal_risks",
+   "fieldtype": "Small Text",
+   "label": "Legal Risks"
+  },
+  {
+   "fieldname": "timeline_feasibility_section",
+   "fieldtype": "Section Break",
+   "label": "Timeline Feasibility"
+  },
+  {
+   "fieldname": "project_phases",
+   "fieldtype": "Table",
+   "label": "Project Phases",
+   "options": "Project Phase"
+  },
+  {
+   "fieldname": "estimated_timeline",
+   "fieldtype": "Data",
+   "label": "Estimated Timeline"
+  },
+  {
+   "fieldname": "critical_path_activities",
+   "fieldtype": "Small Text",
+   "label": "Critical Path Activities"
+  },
+  {
+   "fieldname": "column_break_84",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "timeline_constraints",
+   "fieldtype": "Small Text",
+   "label": "Timeline Constraints"
+  },
+  {
+   "fieldname": "schedule_risks",
+   "fieldtype": "Small Text",
+   "label": "Schedule Risks"
+  },
+  {
+   "fieldname": "risk_assessment_section",
+   "fieldtype": "Section Break",
+   "label": "Risk Assessment"
+  },
+  {
+   "fieldname": "risk_factors",
+   "fieldtype": "Table",
+   "label": "Risk Factors",
+   "options": "Risk Factor"
+  },
+  {
+   "fieldname": "risk_probability",
+   "fieldtype": "Select",
+   "label": "Overall Risk Probability",
+   "options": "Very High\nHigh\nMedium\nLow\nVery Low"
+  },
+  {
+   "fieldname": "risk_impact",
+   "fieldtype": "Select",
+   "label": "Overall Risk Impact",
+   "options": "Very High\nHigh\nMedium\nLow\nVery Low"
+  },
+  {
+   "fieldname": "column_break_90",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "risk_mitigation_strategies",
+   "fieldtype": "Small Text",
+   "label": "Risk Mitigation Strategies"
+  },
+  {
+   "fieldname": "overall_risk_assessment",
+   "fieldtype": "Select",
+   "label": "Overall Risk Assessment",
+   "options": "Very High Risk\nHigh Risk\nModerate Risk\nLow Risk\nVery Low Risk"
+  },
+  {
+   "fieldname": "conclusion_section",
+   "fieldtype": "Section Break",
+   "label": "Conclusion & Recommendation"
+  },
+  {
+   "fieldname": "technical_feasibility_conclusion",
+   "fieldtype": "Select",
+   "label": "Technical Feasibility Conclusion",
+   "options": "Highly Feasible\nFeasible\nMarginally Feasible\nNot Feasible"
+  },
+  {
+   "fieldname": "financial_feasibility_conclusion",
+   "fieldtype": "Select",
+   "label": "Financial Feasibility Conclusion",
+   "options": "Highly Feasible\nFeasible\nMarginally Feasible\nNot Feasible"
+  },
+  {
+   "fieldname": "market_feasibility_conclusion",
+   "fieldtype": "Select",
+   "label": "Market Feasibility Conclusion",
+   "options": "Highly Feasible\nFeasible\nMarginally Feasible\nNot Feasible"
+  },
+  {
+   "fieldname": "column_break_96",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "legal_feasibility_conclusion",
+   "fieldtype": "Select",
+   "label": "Legal Feasibility Conclusion",
+   "options": "Highly Feasible\nFeasible\nMarginally Feasible\nNot Feasible"
+  },
+  {
+   "fieldname": "timeline_feasibility_conclusion",
+   "fieldtype": "Select",
+   "label": "Timeline Feasibility Conclusion",
+   "options": "Highly Feasible\nFeasible\nMarginally Feasible\nNot Feasible"
+  },
+  {
+   "fieldname": "overall_feasibility_conclusion",
+   "fieldtype": "Select",
+   "label": "Overall Feasibility Conclusion",
+   "options": "Highly Feasible\nFeasible\nMarginally Feasible\nNot Feasible"
+  },
+  {
+   "fieldname": "recommendation",
+   "fieldtype": "Text Editor",
+   "label": "Recommendation"
+  },
+  {
+   "fieldname": "attachments_section",
+   "fieldtype": "Section Break",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Table",
+   "label": "Attachments",
+   "options": "File"
+  }
+ ],
+ "links": [],
+ "modified": "2023-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Pre Construction",
+ "name": "Feasibility Study",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Construction Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Construction User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
