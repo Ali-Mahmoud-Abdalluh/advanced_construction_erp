@@ -5,7 +5,7 @@ authors = [
 ]
 description = "Open Source Advanced Construction ERP"
 requires-python = ">=3.10"
-readme = "README.md"
+readme = "readme.md"
 dynamic = ["version"]
 
 [build-system]
